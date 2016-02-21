@@ -1,4 +1,4 @@
-# Zabbix Agent 3.0 XXL Docker image with Docker monitoring support
+# Zabbix Agent 3.0 XXL with Docker monitoring
 
 Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used here.
 All docker module metrics are available except `docker.xnet`. Custom [template Zabbix Agent XLL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
@@ -20,10 +20,10 @@ for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
 
-# Dockerized Zabbix Agent 3.0 XXL without any limitations
+# Zabbix Agent 3.0 XXL without any limitations
 
 We would like to publish also full version as a private Docker image `monitoringartist/zabbix-agent-xxl`. It won't have limitations of public limited image and some additional features will be added as well (Kubernetes monitoring is in our TODO).
-It'll be supported commercially. It's available only for private beta testing at the moment. [Subcribe for Zabbix Agent XXL 3.0 updates[(https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform) now. 
+It'll be supported commercially. It's available only for private beta testing at the moment (see [example of full template with some host metrics](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png)). [Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform) right now. 
 
 # Environment configuration variables
 
@@ -55,7 +55,7 @@ Be aware of limited zabbix-agent-xxl-limited functionalities:
 
 # Bugs
 
-Development is driven by customer. You can reports still report bugs, however prority will have customers.  
+Development is driven by customer. You can still report bugs, however prority will have customers.  
 
 # Author
 
