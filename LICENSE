@@ -1,0 +1,31 @@
+CUSTOM FREEWARE LICENSE
+
+Copyright (C) 2016 Monitoring Artist Ltd - www.monitoringartist.com
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+You may not copy, modify, sublicense, or distribute the binary files 
+zabbix-agent-xxl and zabbix_agentd included in Docker image 
+monitoringartist/zabbix-agent-xxl-limited. Any reusing of Docker image 
+monitoringartist/zabbix-agent-xxl-limited is not allowed.
+
+Warranty Disclaimer
+
+The Software is provided to you as is without warranty of any type or nature, 
+and Monitoring Artist Ltd hereby expressly disclaims any warranties, express or
+implied, including, but not limited to, any implied warranties of 
+merchantability, fitness for a particular purpose, title or non-infringement or
+any warranties arising by usage of trade, course of dealing or course of 
+performance. In addition, Monitoring Artist Ltd expressly disclaims any 
+liability for the accuracy, completeness or usefulness of the Software and does
+not warrant that the Software will function uninterrupted, that it is error-free
+or that any errors will be corrected. You assume total responsibility and risk
+for your use of the Software, including, but not limited to any defects or 
+inaccuracies therein.
+
+Limitation of Liability
+
+In no event shall Monitoring Artist Ltd be liable for any indirect, incidental,
+consequential, special or punitive damages of any kind or nature, including, but
+not limited to, loss of profits or loss of data, for any reason whatsoever.
+
