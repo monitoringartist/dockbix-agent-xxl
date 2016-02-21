@@ -2,10 +2,9 @@
 
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl)
 
-Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used here.
-All [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
+Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
 
-Quick example:
+Quick start:
 
 ```
 docker run \
@@ -24,8 +23,15 @@ for free:
 
 # Zabbix Agent 3.0 XXL without any limitations
 
-We would like to publish soon full version as a private Docker image `monitoringartist/zabbix-agent-xxl`. It won't have limitations of public limited image and some additional features will be added as well (Kubernetes monitoring is in our TODO).
-It'll be supported commercially. It's available only for private beta testing at the moment (see [example of full Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics). [Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform) right now. 
+We would like to publish full version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. **[Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform)** right now. It won't have limitations of public limited image and some additional features will be added as well. Current roadmap:
+
+- host metrics - see [example of Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics 
+- realtime docker.discovery
+- Kubernetes monitoring - again realtime container discovery
+- stress testing support
+- tiny image size (~20MB)
+  
+It'll be supported commercially. It's available only for private beta testing at the moment. 
 
 # Environment configuration variables
 
@@ -33,6 +39,7 @@ You can use any [agent config variable](https://www.zabbix.com/documentation/3.0
 If you don't specify custom settings, then default Zabbix agent settings will be used.
 
 Example:
+
 ```
 docker run \
   --name=zabbix-agent-xxl \
@@ -46,7 +53,7 @@ docker run \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
 ```
 
-Some settings are excluded and you can't override them: `AllowRoot, LoadModulePath, LoadModule, LogType`, because Docker monitoring module is used, 
+Some settings are excluded and you can't override them: `AllowRoot, LoadModulePath, LoadModule, LogType`, because Docker monitoring module is used. 
 
 # Limitations
 
@@ -55,9 +62,16 @@ Be aware of limited monitoringartist/zabbix-agent-xxl-limited functionalities:
 - zabbix agent provides only docker metrics, TLS and agent's Zabbix server IP check are disabled
 - zabbix-agent-xxl-limited container publish statistic information
 
-# Bugs
+Integrations
+============
 
-Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized.  
+* [Puppet for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/puppet.md)
+* [Ansible for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/ansible.md)
+* [docker-compose for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/docker-compose.yml)
+
+# Troubleshooting and bugs
+
+Troubleshooting: check container logs `docker logs zabbix-agent-xxl`.  Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized.  
 
 # Author
 
