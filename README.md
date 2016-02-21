@@ -3,7 +3,7 @@
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl)
 
 Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used here.
-All docker module metrics are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
+All [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
 
 Quick example:
 
@@ -46,18 +46,18 @@ docker run \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
 ```
 
-Because Docker monitoring module is used, some settings are excluded and you can't override them: `AllowRoot, LoadModulePath, LoadModule, LogType`.
+Some settings are excluded and you can't override them: `AllowRoot, LoadModulePath, LoadModule, LogType`, because Docker monitoring module is used, 
 
 # Limitations
 
-Be aware of limited zabbix-agent-xxl-limited functionalities:
+Be aware of limited monitoringartist/zabbix-agent-xxl-limited functionalities:
 
-- zabbix agent provides only docker metrics, TLS and agent's server IP check are disabled
+- zabbix agent provides only docker metrics, TLS and agent's Zabbix server IP check are disabled
 - zabbix-agent-xxl-limited container publish statistic information
 
 # Bugs
 
-Development is driven by customer. You can still report bugs, however prority will have customers.  
+Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized.  
 
 # Author
 
