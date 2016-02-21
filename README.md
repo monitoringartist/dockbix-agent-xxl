@@ -1,7 +1,9 @@
 # Zabbix Agent 3.0 XXL with Docker monitoring
 
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl)
+
 Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used here.
-All docker module metrics are available except `docker.xnet`. Custom [template Zabbix Agent XLL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
+All docker module metrics are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
 
 Quick example:
 
@@ -22,13 +24,13 @@ for free:
 
 # Zabbix Agent 3.0 XXL without any limitations
 
-We would like to publish also full version as a private Docker image `monitoringartist/zabbix-agent-xxl`. It won't have limitations of public limited image and some additional features will be added as well (Kubernetes monitoring is in our TODO).
-It'll be supported commercially. It's available only for private beta testing at the moment (see [example of full template with some host metrics](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png)). [Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform) right now. 
+We would like to publish soon full version as a private Docker image `monitoringartist/zabbix-agent-xxl`. It won't have limitations of public limited image and some additional features will be added as well (Kubernetes monitoring is in our TODO).
+It'll be supported commercially. It's available only for private beta testing at the moment (see [example of full Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics). [Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform) right now. 
 
 # Environment configuration variables
 
 You can use any [agent config variable](https://www.zabbix.com/documentation/3.0/manual/appendix/config/zabbix_agentd), just add prefix `ZA_`.
-If you don't specify config, them default Zabbix agent settings are used.
+If you don't specify custom settings, then default Zabbix agent settings will be used.
 
 Example:
 ```
@@ -44,7 +46,7 @@ docker run \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
 ```
 
-Because Docker monitoring module is used, some configuration are excluded and you can't override them: `AllowRoot, LoadModulePath, LoadModule, LogType`.
+Because Docker monitoring module is used, some settings are excluded and you can't override them: `AllowRoot, LoadModulePath, LoadModule, LogType`.
 
 # Limitations
 

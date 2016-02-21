@@ -1,0 +1,9 @@
+zabbix-agent-xxl:
+  image: monitoringartist/zabbix-agent-xxl-limited:latest
+  hostname: <HOSTNAME>
+  ports:
+    - "10050:10050"
+  volumes:
+    - /:/rootfs
+  environment:
+    - ZA_Server=<ZABBIX SERVER IP/DNS NAME>
