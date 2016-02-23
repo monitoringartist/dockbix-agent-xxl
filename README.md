@@ -62,6 +62,8 @@ Be aware of limited monitoringartist/zabbix-agent-xxl-limited functionalities:
 - zabbix agent provides only docker metrics, TLS and agent's Zabbix server IP check are disabled
 - zabbix-agent-xxl-limited container publish statistic information
 
+Source code of limited zabbix-agent is published in src directory.
+
 Integrations
 ============
 
