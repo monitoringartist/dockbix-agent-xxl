@@ -2,6 +2,8 @@
 
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl)
 
+If you like or use this project, please provide feedback to author - Star it ★.
+
 Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well.
 
 Quick start:
@@ -16,6 +18,8 @@ docker run \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
 ```
 
+Ubuntu users need also `-v /var/run:/var/run`.
+
 Please donate to author, so he can continue to publish other awesome projects 
 for free:
 
@@ -23,7 +27,9 @@ for free:
 
 # Zabbix Agent 3.0 XXL without any limitations
 
-We would like to publish full version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. **[Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform)** right now. It won't have limitations of public limited image and some additional features will be added as well. Current roadmap:
+**[Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform)** right now.
+
+We would like to publish full version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. It won't have limitations of public limited image and some additional features will be added as well. Current roadmap:
 
 - host metrics - see [example of Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics 
 - realtime docker.discovery
