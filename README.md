@@ -18,6 +18,8 @@ docker run \
 
 Ubuntu users need also `-v /var/run:/var/run`.
 
+Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Boot2docker.
+
 Please donate to author, so he can continue to publish other awesome projects 
 for free:
 
