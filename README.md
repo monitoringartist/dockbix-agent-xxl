@@ -37,7 +37,14 @@ We would like to publish full version as a Docker image `monitoringartist/zabbix
 - stress testing support
 - tiny image size (~20MB)
   
-It'll be supported commercially. It's available only for private beta testing at the moment. 
+It'll be supported commercially. It's available only for private beta testing at the moment.
+
+# How it works
+
+![Zabbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/zabbix-agent-xxl-schema.png) 
+
+No rpm/deb or module compilation. Just start zabbix-agent-xxl container and your
+Docker container metrics will be collected from the Docker or cgroup layer.
 
 # Environment configuration variables
 
