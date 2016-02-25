@@ -43,8 +43,9 @@ It'll be supported commercially. It's available only for private beta testing at
 
 ![Zabbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/zabbix-agent-xxl-schema.png) 
 
-No rpm/deb or module compilation. Just start zabbix-agent-xxl container and your
-Docker container metrics will be collected from the Docker or cgroup layer.
+No classic rpm/deb package installation or Zabbix module compilation. Just start
+zabbix-agent-xxl container and your Docker container metrics will be collected
+from the Docker or cgroup layer.
 
 # Environment configuration variables
 
