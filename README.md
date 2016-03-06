@@ -16,7 +16,7 @@ docker run \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
 ```
 
-Ubuntu users need also `-v /var/run:/var/run`.
+**Ubuntu users need also** `-v /var/run:/var/run`.
 
 Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Boot2docker, Photon OS.
 
