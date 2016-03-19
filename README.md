@@ -4,7 +4,7 @@
 
 If you like or use this project, please provide feedback to author - Star it ★.
 
-Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Quick start:
+Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Stress testing supported. Quick start:
 
 ```
 docker run \
@@ -47,6 +47,35 @@ No classic rpm/deb package installation or Zabbix module compilation. Just start
 zabbix-agent-xxl container and your Docker container metrics will be collected
 from the Docker or cgroup layer.
 
+# Included projects
+ 
+ * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) binary to test performance of zabbix-agent
+ * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) loadbable agent module for stress testing
+
+Agent stress testing:
+
+```
+docker run \
+  --name=zabbix-agent-xxl \
+  -h $(hostname) \
+  -p 10050:10050 \
+  -v /:/rootfs \
+  -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
+  -d monitoringartist/zabbix-agent-xxl-limited:latest
+docker exec -ti zabbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping[]
+Testing 1 keys with 4 threads (press Ctrl-C to cancel)...
+stress.ping[] : 161074  0       0
+
+=== Totals ===
+
+Total values processed:         161074
+Total unsupported values:       0
+Total transport errors:         0
+Total key list iterations:      161074
+
+Finished! Processed 161074 values across 4 threads in 30.000743804s (5369.000217 NVPS)
+```
+
 # Environment configuration variables
 
 You can use any [agent config variable](https://www.zabbix.com/documentation/3.0/manual/appendix/config/zabbix_agentd), just add prefix `ZA_`.
@@ -57,7 +86,7 @@ Example:
 ```
 docker run \
   --name=zabbix-agent-xxl \
-  -h `hostname` \
+  -h $(hostname) \
   -p 10050:10050 \
   -v /:/rootfs \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
@@ -78,8 +107,7 @@ Be aware of limited monitoringartist/zabbix-agent-xxl-limited functionalities:
 
 Source code of limited zabbix-agent is published in src directory.
 
-Integrations
-============
+# Integrations
 
 * [Puppet for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/puppet.md)
 * [Ansible for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/ansible.md)
