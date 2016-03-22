@@ -62,18 +62,20 @@ docker run \
   -v /:/rootfs \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
-docker exec -ti zabbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping[]
-Testing 1 keys with 4 threads (press Ctrl-C to cancel)...
-stress.ping[] : 161074  0       0
+  
+# used HW - 8xCPU Intel(R) Xeon(R) CPU E31270 @ 3.40GHz:
+docker exec -ti zabbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping --threads 50
+Testing 1 keys with 50 threads (press Ctrl-C to cancel)...
+stress.ping :	1225787	0	0
 
 === Totals ===
 
-Total values processed:         161074
-Total unsupported values:       0
-Total transport errors:         0
-Total key list iterations:      161074
+Total values processed:		1225787
+Total unsupported values:	0
+Total transport errors:		0
+Total key list iterations:	1225787
 
-Finished! Processed 161074 values across 4 threads in 30.000743804s (5369.000217 NVPS)
+Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650040 NVPS)
 ```
 
 # Environment configuration variables
