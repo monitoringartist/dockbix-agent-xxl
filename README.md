@@ -1,6 +1,6 @@
-# Zabbix Agent 3.0 XXL with Docker monitoring [![](https://badge.imagelayers.io/monitoringartist/zabbix-agent-xxl-limited:latest.svg)](https://imagelayers.io/?images=monitoringartist/zabbix-agent-xxl-limited:latest)
+# Zabbix Agent 3.0 XXL with Docker monitoring
 
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl)
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl) [![](https://badge.imagelayers.io/monitoringartist/zabbix-agent-xxl-limited:latest.svg)](https://imagelayers.io/?images=monitoringartist/zabbix-agent-xxl-limited:latest)
 
 If you like or use this project, please provide feedback to author - Star it ★.
 
