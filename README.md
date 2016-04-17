@@ -1,4 +1,4 @@
-# Zabbix Agent 3.0 XXL with Docker monitoring
+# Zabbix Agent 3.0 XXL with Docker monitoring [![](https://badge.imagelayers.io/monitoringartist/zabbix-agent-xxl-limited:latest.svg)](https://imagelayers.io/?images=monitoringartist/zabbix-agent-xxl-limited:latest)
 
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl)
 
