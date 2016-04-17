@@ -116,18 +116,18 @@ Source code of limited zabbix-agent is published in src directory.
 
 # Troubleshooting
 
-Troubleshooting: check container logs `docker logs zabbix-agent-xxl`.  Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized. Keep in mind that limited Docker image doesn't provide all Zabbix agent features.
+Check container logs `docker logs zabbix-agent-xxl`. Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized. Please provide all details to replicate your issue (Docker/OS version, how was started zabbix-agent/monitored container, listing of you cgroup pseudofiles, ....). Keep in mind that limited Docker image doesn't provide all Zabbix agent features.
 
 # Support
 
-Free public Docker image `monitoringartist/zabbix-agent-xxl-limited` has best effort support. Paid private Docker image `monitoringartist/zabbix-agent-xxl` has a standard tech support and its issues are prioritized. Our response time is 1 working day.
+Free public Docker image `monitoringartist/zabbix-agent-xxl-limited` has best effort support. Paid private Docker image `monitoringartist/zabbix-agent-xxl` has a standard tech support and its issues are prioritized. Our typical response time is 1 working day.
 
 # Security issues
 
 Our zabbix-agent-xxl Docker images are secutiry scanned regularly. All detected vulnerabilities are fixed*:
 
-* Critical - within 72 hours of notification
-* Major - within 7 days of notification
+* Critical vulnerabilities - within 72 hours of notification
+* Major vulnerabilities - within 7 days of notification
  
 \*except Zabbix security issues, which will be reported directly to Zabbix vendor
 
