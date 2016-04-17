@@ -127,7 +127,9 @@ Free public Docker image `monitoringartist/zabbix-agent-xxl-limited` has best ef
 Our zabbix-agent-xxl Docker images are secutiry scanned regularly. All detected vulnerabilities are fixed*:
 
 * Critical - within 72 hours of notification
-* Major - within 7 days of notification 
+* Major - within 7 days of notification
+ 
+\*except Zabbix security issues, which will be reported directly to Zabbix vendor
 
 # Author
 
