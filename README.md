@@ -4,7 +4,7 @@
 
 If you like or use this project, please provide feedback to author - Star it ★.
 
-Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Stress testing supported. Quick start:
+Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Zabbix agent stress testing is supported as well. Quick start:
 
 ```
 docker run \
@@ -25,16 +25,15 @@ for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
 
-# Zabbix Agent 3.0 XXL without any limitations
+# Paid Zabbix Agent 3.0 XXL Docker image
 
-**[Subcribe for Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform)** right now.
+**[Subcribe for Paid Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform)** right now.
 
 We would like to publish full version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. It won't have limitations of public limited image and some additional features will be added as well. Current roadmap:
 
 - host metrics - see [example of Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics 
 - realtime docker.discovery
 - Kubernetes monitoring - again realtime container discovery
-- stress testing support
 - tiny image size (~20MB)
   
 It'll be supported commercially. It's available only for private beta testing at the moment.
@@ -100,9 +99,9 @@ Some settings are excluded and you can't override them: `AllowRoot, LoadModulePa
 
 # Limitations
 
-Be aware of limited monitoringartist/zabbix-agent-xxl-limited functionalities:
+Be aware of limited `monitoringartist/zabbix-agent-xxl-limited` functionalities:
 
-- zabbix agent provides only docker metrics, TLS and agent's Zabbix server IP check are disabled
+- zabbix agent provides only docker metrics, TLS fearures and agent's Zabbix server IP check are disabled
 - zabbix-agent-xxl-limited container publish statistic information
 
 Source code of limited zabbix-agent is published in src directory.
@@ -113,9 +112,20 @@ Source code of limited zabbix-agent is published in src directory.
 * [Ansible for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/ansible.md)
 * [docker-compose for dockerized zabbix-agent-xxl-limited](https://github.com/monitoringartist/zabbix-agent-xxl/blob/master/docker-compose.yml)
 
-# Troubleshooting and bugs
+# Troubleshooting
 
-Troubleshooting: check container logs `docker logs zabbix-agent-xxl`.  Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized.  
+Troubleshooting: check container logs `docker logs zabbix-agent-xxl`.  Development is driven by customer. You can still report bugs, however customer bugs/feature requests will be prioritized. Keep in mind that limited Docker image doesn't provide all Zabbix agent features.
+
+# Support
+
+Free public Docker image `monitoringartist/zabbix-agent-xxl-limited` has best effort support. Paid private Docker image `monitoringartist/zabbix-agent-xxl` has a standard tech support and its issues are prioritized. Our response time is 1 working day.
+
+# Security issues
+
+Our zabbix-agent-xxl Docker images are secutiry scanned regularly. All detected vulnerabilities are fixed*:
+
+* Critical - within 72 hours of notification
+* Major - within 7 days of notification 
 
 # Author
 
