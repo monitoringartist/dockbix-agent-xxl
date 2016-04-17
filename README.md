@@ -4,7 +4,7 @@
 
 If you like or use this project, please provide feedback to author - Star it ★.
 
-Start one container and monitor all Docker containers on your hosts. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Zabbix agent stress testing is supported as well. Quick start:
+Start one container and monitor all Docker containers on your Docker host. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Zabbix agent stress testing is supported as well. Quick start:
 
 ```
 docker run \
@@ -29,14 +29,11 @@ for free:
 
 **[Subcribe for Paid Zabbix Agent XXL 3.0 updates](https://docs.google.com/forms/d/15TAGdkusa2r1TNVxf0ZeZtYaCCXPiubao1IYSbg1Z3Y/viewform)** right now.
 
-We would like to publish full version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. It won't have limitations of public limited image and some additional features will be added as well. Current roadmap:
+We would like to publish paid version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. It won't have any limitations of public limited image and some additional features will be included. Current roadmap:
 
 - host metrics - see [example of Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics 
 - realtime docker.discovery
-- Kubernetes monitoring - again realtime container discovery
-- tiny image size (~20MB)
-  
-It'll be supported commercially. It's available only for private beta testing at the moment.
+- Kubernetes monitoring - again realtime container discovery  
 
 # How it works
 
@@ -44,14 +41,14 @@ It'll be supported commercially. It's available only for private beta testing at
 
 No classic rpm/deb package installation or Zabbix module compilation. Just start
 zabbix-agent-xxl container and your Docker container metrics will be collected
-from the Docker or cgroup layer.
+from the Docker daemon or cgroup layer.
 
 # Included projects
  
  * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) - utility to test performance of Zabbix agent
  * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) - loadbable agent module for stress testing
 
-Agent stress testing:
+Zabbix agent stress testing:
 
 ```
 docker run \
