@@ -20,6 +20,8 @@ docker run \
 
 Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Boot2docker, Photon OS.
 
+**Don't use `localhost` or `127.0.0.1` for `ZA_Server`!**
+
 Please donate to author, so he can continue to publish other awesome projects 
 for free:
 
