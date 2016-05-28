@@ -4,7 +4,7 @@
 
 If you like or use this project, please provide feedback to author - Star it ★.
 
-Start one container and monitor all Docker containers on your Docker host. [Zabbix Docker monitoring](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Zabbix agent stress testing is supported as well. Quick start:
+Start one container and monitor all Docker containers on your Docker host. [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) is used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided as well. Zabbix agent stress testing is supported as well. Quick start:
 
 ```
 docker run \
@@ -12,11 +12,10 @@ docker run \
   -h $(hostname) \
   -p 10050:10050 \
   -v /:/rootfs \
+  -v /var/run:/var/run \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
 ```
-
-**Ubuntu/Debian users need also** `-v /var/run:/var/run`.
 
 Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Boot2docker, Photon OS.
 
@@ -56,6 +55,7 @@ docker run \
   -h $(hostname) \
   -p 10050:10050 \
   -v /:/rootfs \
+  -v /var/run:/var/run \  
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/zabbix-agent-xxl-limited:latest
   
@@ -130,9 +130,11 @@ Our zabbix-agent-xxl Docker images are secutiry scanned regularly. All detected 
 
 # Author
 
-[Devops Monitoring zExpert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring'), who loves monitoring
-systems, which start with letter Z. Those are Zabbix and Zenoss.
+[Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Monitoring'),
+who loves monitoring systems, which start with letter Z. Those are Zabbix and Zenoss.
 
-Professional monitoring services:
+Professional devops / monitoring services:
 
-[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring')
+[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)]
+(http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Monitoring')
+s
