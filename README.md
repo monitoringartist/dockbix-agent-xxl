@@ -19,6 +19,8 @@ docker run \
 
 Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Boot2docker, Photon OS.
 
+**Don't use `localhost` or `127.0.0.1` in `ZA_Server` setting!**
+
 Please donate to author, so he can continue to publish other awesome projects 
 for free:
 
@@ -121,7 +123,7 @@ Free public Docker image `monitoringartist/zabbix-agent-xxl-limited` has best ef
 
 # Security issues
 
-Our zabbix-agent-xxl Docker images are secutiry scanned regularly. All detected vulnerabilities are fixed*:
+Our zabbix-agent-xxl Docker images are security scanned regularly. All detected vulnerabilities are fixed*:
 
 * Critical vulnerabilities - within 72 hours of notification
 * Major vulnerabilities - within 7 days of notification
