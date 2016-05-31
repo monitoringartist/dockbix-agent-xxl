@@ -5,5 +5,6 @@ zabbix-agent-xxl:
     - "10050:10050"
   volumes:
     - /:/rootfs
+    - /var/run:/var/run
   environment:
     - ZA_Server=<ZABBIX SERVER IP/DNS NAME>
