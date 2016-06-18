@@ -7,10 +7,10 @@ If you like or use this project, please provide feedback to author - Star it ★
 **Overview of Monitoring Artist Docker monitoring ecosystem:**
 
 - [Zabbix 3.0 XXL](https://hub.docker.com/r/monitoringartist/zabbix-3.0-xxl/) - standard Zabbix 3.0 server/proxy/UI/snmpd/java gateway with additional XXL extensions
-- [Zabbix agent XXL](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/) - Zabbix 3.0 agent with [Docker (Mesos/Chronos/Marathon) monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) and [systemd monitoring](https://github.com/monitoringartist/zabbix-systemd-monitoring) support
+- [Zabbix agent XXL](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/) - Zabbix 3.0 agent with [Docker (Mesos/Chronos/Marathon) monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) and [systemd monitoring](https://github.com/monitoringartist/zabbix-systemd-monitoring)
 - [Zabbix templates](https://hub.docker.com/r/monitoringartist/zabbix-templates/) - tiny (5MB) image for easy template deployment of selected Zabbix monitoring templates
-- [Docker killer](https://hub.docker.com/r/monitoringartist/docker-killer/) - Docker image for Docker stress and Docker orchestration testing
 - [Kubernetized Zabbix](https://github.com/monitoringartist/kubernetes-zabbix) - containerized Zabbix cluster based on Kubernetes
+- [Docker killer](https://hub.docker.com/r/monitoringartist/docker-killer/) - Docker image for Docker stress and Docker orchestration testing
 
 Start one container and monitor all Docker containers/systemd on your Docker host. [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) and [Zabbix systemd monitoring](https://github.com/monitoringartist/zabbix-systemd-monitoring) are used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided for Docker metrics. Zabbix agent stress testing is supported as well. Quick start:
 
