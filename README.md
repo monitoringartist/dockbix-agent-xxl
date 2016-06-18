@@ -4,6 +4,14 @@
 
 If you like or use this project, please provide feedback to author - Star it ★.
 
+**Overview of Monitoring Artist Docker monitoring ecosystem:**
+
+- [Zabbix 3.0 XXL](https://hub.docker.com/r/monitoringartist/zabbix-3.0-xxl/) - standard Zabbix 3.0 server/proxy/UI/snmpd/java gateway with additional XXL extensions
+- [Zabbix agent XXL](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/) - Zabbix 3.0 agent with [Docker (Mesos/Chronos/Marathon) monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) and [systemd monitoring](https://github.com/monitoringartist/zabbix-systemd-monitoring) support
+- [Zabbix templates](https://hub.docker.com/r/monitoringartist/zabbix-templates/) - tiny (5MB) image for easy template deployment of selected Zabbix monitoring templates
+- [Docker killer](https://hub.docker.com/r/monitoringartist/docker-killer/) - Docker image for Docker stress and Docker orchestration testing
+- [Kubernetized Zabbix](https://github.com/monitoringartist/kubernetes-zabbix) - containerized Zabbix cluster based on Kubernetes
+
 Start one container and monitor all Docker containers/systemd on your Docker host. [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) and [Zabbix systemd monitoring](https://github.com/monitoringartist/zabbix-systemd-monitoring) are used - all [docker module container metrics](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template) is provided for Docker metrics. Zabbix agent stress testing is supported as well. Quick start:
 
 ```
@@ -25,6 +33,16 @@ Please donate to author, so he can continue to publish other awesome projects
 for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
+
+You can use Docker image [monitoringartist/zabbix-templates](https://hub.docker.com/r/monitoringartist/zabbix-templates/) for import of supported Zabbix App Docker monitoring template into your Zabbix. Example:
+
+```
+docker run --rm \
+  -e XXL_apiurl=http://zabbix.org/zabbix \
+  -e XXL_apiuser=Admin \
+  -e XXL_apipass=zabbix \
+  monitoringartist/zabbix-templates
+```
 
 # Paid Zabbix Agent 3.0 XXL Docker image
 
@@ -138,5 +156,4 @@ who loves monitoring systems, which start with letter Z. Those are Zabbix and Ze
 
 Professional devops / monitoring services:
 
-[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)]
-(http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Terraform / Monitoring')
+[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Terraform / Monitoring')
