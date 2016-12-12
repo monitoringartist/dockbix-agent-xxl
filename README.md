@@ -1,8 +1,7 @@
 # Zabbix Agent 3.0 XXL with Docker/systemd monitoring
 
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/monitoringartist/zabbix-agent-xxl) [![](https://badge.imagelayers.io/monitoringartist/zabbix-agent-xxl-limited:latest.svg)](https://imagelayers.io/?images=monitoringartist/zabbix-agent-xxl-limited:latest)
-
-If you like or use this project, please provide feedback to author - Star it ★.
+If you like or use this project, please provide feedback to author - Star it ★
+and submit write us [what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
 
 **Overview of Monitoring Artist (dockerized) monitoring ecosystem:**
 
@@ -124,8 +123,8 @@ Some settings are excluded and you can't override them: `AllowRoot, LoadModulePa
 
 Be aware of limited `monitoringartist/zabbix-agent-xxl-limited` functionalities:
 
-- zabbix agent provides only docker metrics, TLS fearures and Zabbix agent server IP check are disabled
-- zabbix-agent-xxl-limited container publish statistic information
+- zabbix agent provides only docker metrics (no host metrics), TLS features and Zabbix agent server IP check are disabled
+- zabbix-agent-xxl-limited container send statistic informations (Docker version, kernel version, execution driver, agent container start-up fatal errors, ...) to Google Analytics - data are used to improve Docker monitoring functionality and aggregated data might be published
 
 Source code of limited zabbix-agent is published in src directory.
 
@@ -191,9 +190,10 @@ Our zabbix-agent-xxl Docker images are security scanned regularly. All detected 
 Author
 ======
 
-[Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Terraform / Monitoring'),
+[Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
 who loves monitoring systems, which start with letter Z. Those are Zabbix and Zenoss.
 
 Professional devops / monitoring services:
 
-[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Terraform / Monitoring')
+[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)]
+(http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
