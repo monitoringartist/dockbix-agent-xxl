@@ -1,7 +1,7 @@
 # Zabbix Agent 3.0 XXL with Docker/systemd monitoring
 
 If you like or use this project, please provide feedback to author - Star it ★
-and submit write us [what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
+and [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
 
 **Overview of Monitoring Artist (dockerized) monitoring ecosystem:**
 
