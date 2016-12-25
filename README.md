@@ -3,8 +3,8 @@
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 [![GitHub stars](https://img.shields.io/github/stars/monitoringartist/zabbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/zabbix-agent-xxl)
-[![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl.svg?style=plastic&label=DockerHub%20Stars)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
-[![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/zabbix-agent-xxl.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
+[![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Stars)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
+[![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/zabbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
 
 If you like or use this project, please provide feedback to author - Star it ★
 and [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
