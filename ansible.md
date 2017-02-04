@@ -9,23 +9,22 @@ This for your Ansible inspiration. Final implementation is up to you:
   docker:
     name: zabbix-agent-xxl
     image: monitoringartist/zabbix-agent-xxl-limited:latest
+    restart_policy: unless-stopped
     state: started
     pull: always
     ports:
-    - "10050:10050"
+      - "10050:10050"
     volumes:
-    - /:/rootfs    
+      - /:/rootfs    
     env:
         ZA_Server: <ZABBIX SERVER IP/DNS NAME>     
 ```
 
-Author
-======
+# Author
 
-[Devops Monitoring zExpert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring'), 
-who loves monitoring systems, which start with letter Z. 
-Those are Zabbix and Zenoss.
+[Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
+who loves monitoring systems, which start with letter Z. Those are Zabbix and Zenoss.
 
-Professional monitoring services:
+Professional devops / monitoring services:
 
-[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring')
+[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
