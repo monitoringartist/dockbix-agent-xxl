@@ -13,22 +13,21 @@ docker::image { 'monitoringartist/zabbix-agent-xxl-limited':
   image_tag => 'latest',
 }->
 docker::run { 'zabbix-agent-xxl':
-  image   => 'monitoringartist/zabbix-agent-xxl-limited',
-  ports   => ['10050'],
-  volumes => ['/:/rootfs'],
-  env     => [
+  image            => 'monitoringartist/zabbix-agent-xxl-limited',
+  extra_parameters => ['--restart=unless-stopped'],
+  ports            => ['10050'],
+  volumes          => ['/:/rootfs'],
+  env              => [
     'ZA_Server=<ZABBIX SERVER IP/DNS NAME>',
   ],
 }
 ```
 
-Author
-======
+# Author
 
-[Devops Monitoring zExpert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring'), 
-who loves monitoring systems, which start with letter Z. 
-Those are Zabbix and Zenoss.
+[Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
+who loves monitoring systems, which start with letter Z. Those are Zabbix and Zenoss.
 
-Professional monitoring services:
+Professional devops / monitoring services:
 
-[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring')
+[![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
