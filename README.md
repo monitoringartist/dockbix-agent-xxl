@@ -189,6 +189,9 @@ him and ask for paid support
 All reported issues, which are not really issues, but requests for support will
 be closed with reference to this README section.
 
+Known issue: a systems with recent kernel (4.8.4 and above) might have a problem
+to start agent properly (docker logs: terminated with signal 11).
+
 # Author
 
 [Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
