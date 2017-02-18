@@ -53,12 +53,12 @@ Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
 `monitoringartist/dockbix-agent-xxl:latest`. However, limited version:
 
-- doesn't support command execution in the container; for example you can't
+- doesn't support command execution in the container; for example, you can't
 use `system.run[]` item
-- doesn't support any shell access in the container; for example you can't
+- doesn't support any shell access in the container; for example, you can't
 use `docker exec -ti dockbix-agent-xxl bash`
 - collects statistic Google Analytics data (Docker version, kernel version, execution driver,
-Dockbix agent container start-up errors, ...), which are use for improvements;
+Dockbix agent container start-up errors, ...), which are used for improvements;
 statistics may be used also for public presentations
 
 General limitations:
@@ -68,8 +68,8 @@ General limitations:
 # Environment configuration variables
 
 You can use almost any [agent config parameter](https://www.zabbix.com/documentation/3.2/manual/appendix/config/zabbix_agentd),
-just add prefix `ZA_`. If you don't specify custom setting variable, then default
-Zabbix agent setting will be used. For example you want to use `StartAgents=10`,
+just add prefix `ZA_`. If you don't specify a custom setting variable, then default
+Zabbix agent setting will be used. For example, you want to use `StartAgents=10`,
 just add environment variable `-e "ZA_StartAgents=10"`.
 
 Example:
@@ -178,7 +178,7 @@ b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbi
 # Support
 
 First try to troubleshoot problems. Increase debug level ` -e 'ZA_DebugLevel=5'`
-and check container logs `docker logs dockbix-agent-xxl`.
+and check the container logs `docker logs dockbix-agent-xxl`.
 
 Other options:
 
