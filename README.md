@@ -1,8 +1,8 @@
 # Dockbix XXL - Zabbix Agent with Docker monitoring
 
-[![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
-[![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/zabbix-agent-xxl)
-[![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Stars)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
+[![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg)
+[![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/dockbix-agent-xxl)
+[![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Stars)](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg)
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
@@ -25,8 +25,8 @@ or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQz
 - **[Monitoring Analytics](https://hub.docker.com/r/monitoringartist/monitoring-analytics/)** - R statistical computing and graphics for monitoring from data scientists
 - **[Docker killer](https://hub.docker.com/r/monitoringartist/docker-killer/)** - Docker image for Docker stress and Docker orchestration testing
 
-Start Dockbix agent container and monitor all Docker containers on your Docker host.
-[Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
+Start Dockbix agent container and monitor all Docker containers on your host.
+Module [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
 is used - all [docker module container metrics](https://github.com/monitoringartist/zabbix-docker-monitoring)
 are available except `docker.xnet`. Import/assign [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml)
 and then just start Dockbix agent container:
@@ -57,8 +57,9 @@ has almost the same functionality as private paid Docker image
 use `system.run[]` item
 - doesn't support any shell access in the container; for example you can't
 use `docker exec -ti dockbix-agent-xxl bash`
-- collects statistics data (Docker version, kernel version, execution driver,
-agent container start-up fatal  errors, ...), which are use for improvements
+- collects statistic Google Analytics data (Docker version, kernel version, execution driver,
+Dockbix agent container start-up errors, ...), which are use for improvements;
+statistics may be used also for public presentations
 
 General limitations:
 
@@ -66,7 +67,7 @@ General limitations:
 
 # Environment configuration variables
 
-You can use almost any [agent config variable](https://www.zabbix.com/documentation/3.2/manual/appendix/config/zabbix_agentd),
+You can use almost any [agent config parameter](https://www.zabbix.com/documentation/3.2/manual/appendix/config/zabbix_agentd),
 just add prefix `ZA_`. If you don't specify custom setting variable, then default
 Zabbix agent setting will be used. For example you want to use `StartAgents=10`,
 just add environment variable `-e "ZA_StartAgents=10"`.
@@ -87,11 +88,12 @@ docker run \
 ```
 
 Some settings are excluded and you can't override them: `AllowRoot, LoadModulePath,
-LoadModule, LogType`, because Docker monitoring module is used.
+LoadModule, LogType`, because Docker monitoring module is used. Zabbix agent
+configuration from the file is not supported.
 
 # How it works
 
-![Dockbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/doc/zabbix-agent-xxl-schema.png)
+![Dockbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/doc/dockbix-agent-xxl-schema.png)
 
 No classic rpm/deb package installation or Zabbix module compilation. Just start
 dockbix-agent-xxl container and your host metrics / Docker container metrics will
