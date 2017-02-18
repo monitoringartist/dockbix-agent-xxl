@@ -6,12 +6,12 @@
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
-Zabbix Agent XXL with Docker monitoring and host metrics support, which can be
-used with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian,
-Boot2docker, Photon OS.
+Standard Zabbix Agent with Docker monitoring and host metrics support, which
+can be used with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu,
+Debian, Boot2docker, Photon OS.
 
 If you like or use this project, please provide feedback to author - Star it ★
-or [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
+or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
 
 **Overview of Monitoring Artist (dockerized) monitoring ecosystem:**
 
@@ -25,10 +25,10 @@ or [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1
 - **[Monitoring Analytics](https://hub.docker.com/r/monitoringartist/monitoring-analytics/)** - R statistical computing and graphics for monitoring from data scientists
 - **[Docker killer](https://hub.docker.com/r/monitoringartist/docker-killer/)** - Docker image for Docker stress and Docker orchestration testing
 
-Start one container and monitor all Docker containers on your Docker host.
+Start Dockbix agent container and monitor all Docker containers on your Docker host.
 [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
 is used - all [docker module container metrics](https://github.com/monitoringartist/zabbix-docker-monitoring)
-are available except `docker.xnet`. Import [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml)
+are available except `docker.xnet`. Import/assign [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml)
 and then just start Dockbix agent container:
 
 ```
