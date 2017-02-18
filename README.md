@@ -192,7 +192,7 @@ be closed with reference to this README section.
 # Author
 
 [Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
-who loves monitoring systems, which start with letter Z. Those are Zabbix and Zenoss.
+who loves monitoring systems: Zabbix, Grafana, Elasticsearch, Kibana, Prometheus, Sysdig, ...
 
 Professional devops / monitoring services:
 
