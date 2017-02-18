@@ -1,4 +1,4 @@
-# Puppet for dockerized zabbix-agent-xxl-limited
+# Puppet for dockerized dockbix-agent-xxl-limited
 
 This for your Puppet inspiration. Final implementation is up to you:
 
@@ -9,13 +9,12 @@ This for your Puppet inspiration. Final implementation is up to you:
 class { 'docker':
   version => 'latest',
 }->
-docker::image { 'monitoringartist/zabbix-agent-xxl-limited':
+docker::image { 'monitoringartist/dockbix-agent-xxl-limited':
   image_tag => 'latest',
 }->
-docker::run { 'zabbix-agent-xxl':
-  image            => 'monitoringartist/zabbix-agent-xxl-limited',
-  extra_parameters => ['--restart=unless-stopped'],
-  ports            => ['10050'],
+docker::run { 'dockbix-agent-xxl':
+  image            => 'monitoringartist/dockbix-agent-xxl-limited',
+  extra_parameters => ['--restart=unless-stopped', '--net=host', '--privileged'],
   volumes          => ['/:/rootfs'],
   env              => [
     'ZA_Server=<ZABBIX SERVER IP/DNS NAME>',

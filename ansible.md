@@ -1,19 +1,19 @@
-# Ansible for dockerized zabbix-agent-xxl-limited
+# Ansible for dockerized dockbix-agent-xxl-limited
 
 This for your Ansible inspiration. Final implementation is up to you:
 
 ```
 # Jan Garaj - www.monitoringartist.com
 # Used Core Docker module - http://docs.ansible.com/ansible/docker_module.html
-- name: zabbix-agent-xxl container
+- name: dockbix-agent-xxl container
   docker:
-    name: zabbix-agent-xxl
-    image: monitoringartist/zabbix-agent-xxl-limited:latest
+    name: dockbix-agent-xxl
+    image: monitoringartist/dockbix-agent-xxl-limited:latest
     restart_policy: unless-stopped
     state: started
     pull: always
-    ports:
-      - "10050:10050"
+    net: host
+    privileged: true
     volumes:
       - /:/rootfs    
     env:
