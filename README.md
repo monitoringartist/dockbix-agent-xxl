@@ -192,7 +192,9 @@ be closed with reference to this README section.
 # Author
 
 [Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
-who loves monitoring systems: Zabbix, Grafana, Elasticsearch, Kibana, Prometheus, Sysdig, ...
+who loves monitoring systems and cutting/bleeding edge technologies: Docker,
+Kubernetes, AWS, GCP, Terraform, Zabbix, Grafana, Elasticsearch, Kibana,
+Prometheus, Sysdig, ...
 
 Professional devops / monitoring services:
 
