@@ -101,10 +101,10 @@ the Docker daemon API or cgroups.
 
 # Included projects
 
- * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench)
- - utility to test performance of Zabbix agent
- * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test)
- - loadbable agent module for stress testing
+ * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) -
+ utility to test performance of Zabbix agent
+ * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) -
+ loadbable agent module for stress testing
 
 Zabbix agent stress testing:
 
