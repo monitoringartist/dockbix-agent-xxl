@@ -1,4 +1,4 @@
-# Dockbix - Dockerized Zabbix Agent XXL with Docker monitoring
+# Dockbix XXL - Zabbix Agent with Docker monitoring
 
 [![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/zabbix-agent-xxl-limited.svg)
 [![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/zabbix-agent-xxl)
@@ -6,11 +6,11 @@
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
-Dockerized Zabbix Agent XXL with Docker monitoring support + host metrics support,
-which can be used with any Zabbix server.
+Zabbix Agent XXL with Docker monitoring and host metrics support, which can be
+used with any Zabbix server.
 
 If you like or use this project, please provide feedback to author - Star it ★
-and [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
+or [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
 
 **Overview of Monitoring Artist (dockerized) monitoring ecosystem:**
 
@@ -61,14 +61,11 @@ docker run --rm \
   monitoringartist/zabbix-templates
 ```
 
-# Paid Dockbix Agent XXL Docker image
+# Public limited vs private paid image
 
-
-We would like to publish paid version as a Docker image `monitoringartist/zabbix-agent-xxl` soon. It won't have any limitations of public limited image and some additional features will be included. Current roadmap:
-
-- host metrics - see [example of Zabbix Agent XXL template](https://raw.githubusercontent.com/monitoringartist/zabbix-agent-xxl/master/doc/Template-Zabbix-Agent-XXL.png) with some host metrics 
-- realtime docker.discovery
-- Kubernetes monitoring - again realtime container discovery
+Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
+has almost the same functionality as private paid Docker image
+`monitoringartist/dockbix-agent-xxl:latest`
 
 # How it works
 
