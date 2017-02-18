@@ -142,9 +142,8 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 
 Dockbix Agent XXL service managed by systemd:
 
-Example of [systemd service unit file for Dockbix Agent XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service)
-- don't forget to edit environment variables. You can manage it as a standard
-OS service:
+Example of [systemd service unit file for Dockbix Agent XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service) -
+don't forget to edit environment variables. You can manage it as a standard OS service:
 
 ```
 # wget -P /usr/lib/systemd/system/ https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service
