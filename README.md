@@ -51,47 +51,18 @@ for free:
 
 Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
-`monitoringartist/dockbix-agent-xxl:latest`
+`monitoringartist/dockbix-agent-xxl:latest`. However limited version:
 
-# How it works
+- doesn't support command execution in the container; for example you can't
+use `system.run[]` item
+- doesn't support any shell access in the container; for example you can't
+use `docker exec -ti dockbix-agent-xxl bash`
+- collects statistics data (Docker version, kernel version, execution driver,
+agent container start-up fatal  errors, ...), which are use for improvements
 
-![Dockbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/doc/zabbix-agent-xxl-schema.png)
+General limitations:
 
-No classic rpm/deb package installation or Zabbix module compilation. Just start
-dockbix-agent-xxl container and your host metrics / Docker container metrics will
-be collected from the Docker daemon or cgroup layer.
-
-# Included projects
- 
- * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) - utility to test performance of Zabbix agent
- * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) - loadbable agent module for stress testing
-
-Zabbix agent stress testing:
-
-```
-docker run \
-  --name=dockbix-agent-xxl \
-  --net=host \
-  --privileged \
-  -v /:/rootfs \
-  -v /var/run:/var/run \  
-  -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
-  -d monitoringartist/dockbix-agent-xxl-limited:latest
-  
-# used HW - 8xCPU Intel(R) Xeon(R) CPU E31270 @ 3.40GHz:
-docker exec -ti dockbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping --threads 50
-Testing 1 keys with 50 threads (press Ctrl-C to cancel)...
-stress.ping :	1225787	0	0
-
-=== Totals ===
-
-Total values processed:		1225787
-Total unsupported values:	0
-Total transport errors:		0
-Total key list iterations:	1225787
-
-Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650040 NVPS)
-```
+- TLS features and Zabbix agent server IP check are disabled
 
 # Environment configuration variables
 
@@ -116,18 +87,47 @@ docker run \
 ```
 
 Some settings are excluded and you can't override them: `AllowRoot, LoadModulePath,
-LoadModule, LogType`, because Docker monitoring module is used. 
+LoadModule, LogType`, because Docker monitoring module is used.
 
-# Limitations
+# How it works
 
-Be aware of limited `monitoringartist/dockbix-agent-xxl-limited` functionalities:
+![Dockbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/doc/zabbix-agent-xxl-schema.png)
 
-- TLS features and Zabbix agent server IP check are disabled
-- dockbix-agent-xxl-limited container send statistic informations
- (Docker version, kernel version, execution driver, agent container start-up fatal
- errors, ...) to Google Analytics - data are used to improve Docker monitoring
- functionality and aggregated data might be published to the community. You have
- still option to use paid Docker image, which doesn't collect any stats.
+No classic rpm/deb package installation or Zabbix module compilation. Just start
+dockbix-agent-xxl container and your host metrics / Docker container metrics will
+be collected from the Docker daemon or cgroup layer.
+
+# Included projects
+
+ * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) - utility to test performance of Zabbix agent
+ * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) - loadbable agent module for stress testing
+
+Zabbix agent stress testing:
+
+```
+docker run \
+  --name=dockbix-agent-xxl \
+  --net=host \
+  --privileged \
+  -v /:/rootfs \
+  -v /var/run:/var/run \
+  -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
+  -d monitoringartist/dockbix-agent-xxl-limited:latest
+
+# used HW - 8xCPU Intel(R) Xeon(R) CPU E31270 @ 3.40GHz:
+docker exec -ti dockbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping --threads 50
+Testing 1 keys with 50 threads (press Ctrl-C to cancel)...
+stress.ping :	1225787	0	0
+
+=== Totals ===
+
+Total values processed:		1225787
+Total unsupported values:	0
+Total transport errors:		0
+Total key list iterations:	1225787
+
+Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650040 NVPS)
+```
 
 # Integrations
 
@@ -136,7 +136,7 @@ Be aware of limited `monitoringartist/dockbix-agent-xxl-limited` functionalities
 * [docker-compose for dockerized dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/docker-compose.yml)
 * [systemd service unit file - see next section](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/systemd/docker-zabbix-agent-xxl.service)
 
-# Dockerized Dockbiz Agent XXL service managed by systemd
+# Dockbix Agent XXL service managed by systemd
 
 Example of service unit file for Dockerized Dockbix Agent XXL - don't forget to
 edit environment variables. You can manage it as a standard OS service:
@@ -171,19 +171,16 @@ Aug 20 00:17:05 dockerhost docker[72719]: 15:20160819:231705.586 agent #4 starte
 b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbix-agent-xxl"       25 seconds ago      Up 24 seconds       0.0.0.0:10050->10050/tcp   docker-zabbix-agent-xxl.service
 ```
 
-# Troubleshooting
-
-Check container logs `docker logs zabbix-agent-xxl`. Development is driven by customer.
-You can still report bugs, however customer bugs/feature requests will be prioritized.
-Please provide all details to replicate your issue (Docker/OS version, how container
-was started, listing of you cgroup pseudofiles, ....). Keep in mind that limited
-Docker image doesn't provide all Zabbix agent features.
-
 # Support
 
+First try to troubleshooot problems. Increase debug level ` -e 'ZA_DebugLevel=5'`
+and check container logs `docker logs dockbix-agent-xxl`.
+
+Anothe options:
+
 - Try to ask Zabbix community http://www.zabbix.org/wiki/Getting_help
-- If you need support from the author, then don't hesitate to contact him and
-ask for paid support
+- If you need support directly from the author, then don't hesitate to contact
+him and ask for paid support
 
 # Author
 
