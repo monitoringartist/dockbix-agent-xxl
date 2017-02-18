@@ -42,7 +42,7 @@ docker run \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
 
-Please donate to author, so he can continue to publish other awesome projects 
+Please donate to the author, so he can continue to publish other awesome projects
 for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
@@ -51,7 +51,7 @@ for free:
 
 Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
-`monitoringartist/dockbix-agent-xxl:latest`. However limited version:
+`monitoringartist/dockbix-agent-xxl:latest`. However, limited version:
 
 - doesn't support command execution in the container; for example you can't
 use `system.run[]` item
@@ -177,7 +177,7 @@ b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbi
 
 # Support
 
-First try to troubleshooot problems. Increase debug level ` -e 'ZA_DebugLevel=5'`
+First try to troubleshoot problems. Increase debug level ` -e 'ZA_DebugLevel=5'`
 and check container logs `docker logs dockbix-agent-xxl`.
 
 Other options:
