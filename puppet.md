@@ -14,7 +14,9 @@ docker::image { 'monitoringartist/dockbix-agent-xxl-limited':
 }->
 docker::run { 'dockbix-agent-xxl':
   image            => 'monitoringartist/dockbix-agent-xxl-limited',
-  extra_parameters => ['--restart=unless-stopped', '--net=host', '--privileged'],
+  extra_parameters => ['--restart=unless-stopped'],
+  privileged       => true,
+  net              => 'host',
   volumes          => ['/:/rootfs'],
   env              => [
     'ZA_Server=<ZABBIX SERVER IP/DNS NAME>',
