@@ -196,6 +196,6 @@ who loves monitoring systems and cutting/bleeding edge technologies: Docker,
 Kubernetes, AWS, GCP, Terraform, Zabbix, Grafana, Elasticsearch, Kibana,
 Prometheus, Sysdig, ...
 
-Professional devops / monitoring services:
+Professional devops / monitoring / consulting services:
 
 [![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
