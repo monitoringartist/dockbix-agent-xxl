@@ -1,10 +1,12 @@
-zabbix-agent-xxl:
-  image: monitoringartist/zabbix-agent-xxl-limited:latest
-  hostname: <HOSTNAME>
-  ports:
-    - "10050:10050"
-  volumes:
-    - /:/rootfs
-    - /var/run:/var/run
-  environment:
-    - ZA_Server=<ZABBIX SERVER IP/DNS NAME>
+version: '2'
+
+services:
+  dockbix-agent-xxl:
+    image: monitoringartist/dockbix-agent-xxl-limited:latest
+    privileged: true
+    network_mode: "host"
+    volumes:
+      - /:/rootfs
+      - /var/run:/var/run
+    environment:
+      - ZA_Server=<ZABBIX SERVER IP/DNS NAME>

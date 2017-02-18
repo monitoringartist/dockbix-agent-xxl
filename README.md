@@ -87,22 +87,24 @@ docker run \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
 
-Some settings are excluded and you can't override them: `AllowRoot, LoadModulePath,
-LoadModule, LogType`, because Docker monitoring module is used. Zabbix agent
-configuration from the file is not supported.
+You can't override some parameters: `AllowRoot, LoadModulePath, LoadModule,
+LogType`, because Docker monitoring module is used. Also Zabbix agent configuration
+from the config file is not supported.
 
 # How it works
 
 ![Dockbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/doc/dockbix-agent-xxl-schema.png)
 
 No classic rpm/deb package installation or Zabbix module compilation. Just start
-dockbix-agent-xxl container and your host metrics / Docker container metrics will
-be collected from the Docker daemon or cgroup layer.
+dockbix-agent-xxl container and Docker container metrics will be collected from
+the Docker daemon API or cgroups.
 
 # Included projects
 
- * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) - utility to test performance of Zabbix agent
- * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) - loadbable agent module for stress testing
+ * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench)
+ - utility to test performance of Zabbix agent
+ * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test)
+ - loadbable agent module for stress testing
 
 Zabbix agent stress testing:
 
@@ -133,9 +135,9 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 
 # Integrations
 
-* [Puppet for dockerized dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/puppet.md)
-* [Ansible for dockerized dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/ansible.md)
-* [docker-compose for dockerized dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/docker-compose.yml)
+* [Puppet for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/puppet.md)
+* [Ansible for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/ansible.md)
+* [docker-compose for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/docker-compose.yml)
 * [systemd service unit file - see next section](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/systemd/docker-zabbix-agent-xxl.service)
 
 # Dockbix Agent XXL service managed by systemd
