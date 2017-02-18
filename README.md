@@ -140,10 +140,11 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 * [docker-compose for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/docker-compose.yml)
 * [systemd service unit file - see next section](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/systemd/docker-zabbix-agent-xxl.service)
 
-# Dockbix Agent XXL service managed by systemd
+Dockbix Agent XXL service managed by systemd:
 
-Example of service unit file for Dockerized Dockbix Agent XXL - don't forget to
-edit environment variables. You can manage it as a standard OS service:
+Example of [systemd service unit file for Dockbix Agent XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service)
+- don't forget to edit environment variables. You can manage it as a standard
+OS service:
 
 ```
 # wget -P /usr/lib/systemd/system/ https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service
@@ -152,7 +153,7 @@ edit environment variables. You can manage it as a standard OS service:
 Created symlink from /etc/systemd/system/multi-user.target.wants/docker-dockbix-agent-xxl.service to /usr/lib/systemd/system/docker-dockbix-agent-xxl.service.
 # systemctl start docker-dockbix-agent-xxl.service
 # systemctl status docker-dockbix-agent-xxl.service
-● docker-dockbix-agent-xxl.service - Dockerized Dockbix Agent XXL www.monitoringartist.com
+● docker-dockbix-agent-xxl.service - Dockbix Agent XXL www.monitoringartist.com
    Loaded: loaded (/usr/lib/systemd/system/docker-dockbix-agent-xxl.service; enabled; vendor preset: disabled)
    Active: active (running) since Sat 2016-08-20 00:17:04 BST; 5s ago
   Process: 72712 ExecStartPre=/usr/bin/docker pull monitoringartist/dockbix-agent-xxl-limited:latest (code=exited, status=0/SUCCESS)
