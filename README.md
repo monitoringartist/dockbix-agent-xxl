@@ -63,7 +63,7 @@ statistics may be used also for public presentations
 
 General limitations:
 
-- TLS features and Zabbix agent server IP check are disabled
+- Zabbix agent TLS support and Zabbix agent server IP check are disabled
 
 # Environment configuration variables
 
@@ -180,11 +180,14 @@ b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbi
 First try to troubleshooot problems. Increase debug level ` -e 'ZA_DebugLevel=5'`
 and check container logs `docker logs dockbix-agent-xxl`.
 
-Anothe options:
+Other options:
 
 - Try to ask Zabbix community http://www.zabbix.org/wiki/Getting_help
 - If you need support directly from the author, then don't hesitate to contact
 him and ask for paid support
+
+All reported issues, which are not really issues, but requests for support will
+be closed with reference to this README section.
 
 # Author
 
