@@ -193,8 +193,13 @@ be closed with reference to this README section.
 
 [Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
 who loves monitoring systems and cutting/bleeding edge technologies: Docker,
-Kubernetes, AWS, GCP, Terraform, Zabbix, Grafana, Elasticsearch, Kibana,
+Kubernetes, AWS, Google GCP, Terraform, Zabbix, Grafana, Elasticsearch, Kibana,
 Prometheus, Sysdig, ...
+
+Summary:
+* 1000+ [GitHub](https://github.com/monitoringartist/) stars
+* 6000+ [Grafana dashboard](https://grafana.net/monitoringartist) downloads
+* 800 000+ [Docker image](https://hub.docker.com/u/monitoringartist/) pulls
 
 Professional devops / monitoring / consulting services:
 
