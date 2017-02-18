@@ -7,7 +7,8 @@
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
 Zabbix Agent XXL with Docker monitoring and host metrics support, which can be
-used with any Zabbix server.
+used with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian,
+Boot2docker, Photon OS.
 
 If you like or use this project, please provide feedback to author - Star it ★
 or [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
@@ -27,9 +28,8 @@ or [write what's missing for you](https://docs.google.com/forms/d/e/1FAIpQLSdte1
 Start one container and monitor all Docker containers on your Docker host.
 [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
 is used - all [docker module container metrics](https://github.com/monitoringartist/zabbix-docker-monitoring)
-are available except `docker.xnet`. Custom [template Zabbix Agent XXL](https://github.com/monitoringartist/zabbix-agent-xxl/tree/master/template)
-is provided for Docker metrics. Zabbix agent stress testing is supported as well.
-Quick start:
+are available except `docker.xnet`. Import [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml)
+and then just start Dockbix agent container:
 
 ```
 docker run \
@@ -42,24 +42,10 @@ docker run \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
 
-Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Boot2docker, Photon OS.
-
 Please donate to author, so he can continue to publish other awesome projects 
 for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
-
-You can use Docker image [monitoringartist/zabbix-templates](https://hub.docker.com/r/monitoringartist/zabbix-templates/)
-for import of supported Zabbix App Docker monitoring template into your Zabbix.
-Example:
-
-```
-docker run --rm \
-  -e XXL_apiurl=http://zabbix.org/zabbix \
-  -e XXL_apiuser=Admin \
-  -e XXL_apipass=zabbix \
-  monitoringartist/zabbix-templates
-```
 
 # Public limited vs private paid image
 
