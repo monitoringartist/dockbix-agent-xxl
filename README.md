@@ -6,9 +6,9 @@
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
-Standard Zabbix Agent with Docker monitoring and host metrics support, which
-can be used with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu,
-Debian, Boot2docker, Photon OS.
+Standard Zabbix Agent with Docker and host metrics support, which can be used
+with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Fedora,
+Boot2docker, Photon OS.
 
 If you like or use this project, please provide feedback to author - Star it ★
 or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
@@ -29,7 +29,7 @@ Start Dockbix agent container and monitor all Docker containers on your host.
 Module [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
 is used - all [docker module container metrics](https://github.com/monitoringartist/zabbix-docker-monitoring)
 are available except `docker.xnet`. Import/assign [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml)
-and then just start Dockbix agent container:
++ official Zabbix "Template OS Linux" and then just start Dockbix agent container:
 
 ```
 docker run \
@@ -91,9 +91,19 @@ You can't override some parameters: `AllowRoot, LoadModulePath, LoadModule,
 LogType`, because Docker monitoring module is used. Also Zabbix agent configuration
 from the config file is not supported.
 
+# Public Dockbix agent XXL
+
+Public Dockbix agent XXL on the address `play.monitoringart.com:10050`. It's
+available for anyone. Just create new host in your Zabbix server with this
+configuration:
+
+![Public Dockbix Agent XXL](doc/dockbix-public-agent.png)
+
+![Public Dockbix Agent XXL](doc/dockbix-public-agent2.png)
+
 # How it works
 
-![Dockbix Agent XXL Docker container](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/doc/dockbix-agent-xxl-schema.png)
+![Dockbix Agent XXL Docker container](doc/dockbix-agent-xxl-schema.png)
 
 No classic rpm/deb package installation or Zabbix module compilation. Just start
 dockbix-agent-xxl container and Docker container metrics will be collected from
@@ -142,7 +152,7 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 
 Dockbix Agent XXL service managed by systemd:
 
-Example of [systemd service unit file for Dockbix Agent XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service) -
+Example of [systemd service unit file for Dockbix Agent XXL](systemd/docker-dockbix-agent-xxl.service) -
 don't forget to edit environment variables. You can manage it as a standard OS service:
 
 ```
