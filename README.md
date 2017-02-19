@@ -28,8 +28,8 @@ or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQz
 Start Dockbix agent container and monitor all Docker containers on your host.
 Module [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
 is used - all [docker module container metrics](https://github.com/monitoringartist/zabbix-docker-monitoring)
-are available except `docker.xnet`. Import/assign [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml)
-+ official Zabbix "Template OS Linux" and then just start Dockbix agent container:
+are available except `docker.xnet`. Import/assign [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml) +
+official Zabbix "Template OS Linux" and then just start Dockbix agent container:
 
 ```
 docker run \
@@ -109,6 +109,15 @@ this configuration:
 No classic rpm/deb package installation or Zabbix module compilation. Just start
 dockbix-agent-xxl container and Docker container metrics will be collected from
 the Docker daemon API or cgroups.
+
+# How to monitor dockerized apps
+
+These are only recommendations:
+
+- health endpoint: publish app health as a http endpoint, which can be used for
+  monitoring
+- monitor them as a service: use standard Zabbix TCP/HTTP check
+- monitor them as a process: use standard Zabbix process check
 
 # Included projects
 
