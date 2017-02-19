@@ -1,4 +1,4 @@
-# Dockbix XXL - Zabbix Agent with Docker monitoring
+# Dockbix Agent XXL - Zabbix Agent with Docker monitoring
 
 [![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg)
 [![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/dockbix-agent-xxl)
