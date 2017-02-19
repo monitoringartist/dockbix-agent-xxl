@@ -93,13 +93,14 @@ from the config file is not supported.
 
 # Public Dockbix agent XXL
 
-Public Dockbix agent XXL on the address `play.monitoringart.com:10050`. It's
-available for anyone. Just create new host in your Zabbix server with this
-configuration:
+Public Dockbix agent XXL is available on the address
+`play.monitoringart.com:10050`. It's available for anyone as a public part of
+monitoringartist playground. Just create new host in your Zabbix server with
+this configuration:
 
 ![Public Dockbix Agent XXL](doc/dockbix-public-agent.png)
 
-![Public Dockbix Agent XXL](doc/dockbix-public-agent2.png)
+![Public Dockbix Agent XXL](doc/dockbix-public-agent1.png)
 
 # How it works
 
@@ -153,7 +154,8 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 Dockbix Agent XXL service managed by systemd:
 
 Example of [systemd service unit file for Dockbix Agent XXL](systemd/docker-dockbix-agent-xxl.service) -
-don't forget to edit environment variables. You can manage it as a standard OS service:
+don't forget to edit environment variables. Then you can manage Dockbix agent XXL
+as a standard OS service:
 
 ```
 # wget -P /usr/lib/systemd/system/ https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service
@@ -200,7 +202,7 @@ All reported issues, which are not really issues, but requests for support will
 be closed with reference to this README section.
 
 Known issue: a systems with recent kernel (4.8.4 and above) might have a problem
-to start agent properly (docker logs: terminated with signal 11).
+to start agent properly (issue in the docker logs: `terminated with signal 11`).
 
 # Author
 
