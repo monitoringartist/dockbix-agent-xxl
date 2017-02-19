@@ -146,10 +146,10 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 
 # Integrations
 
-* [Puppet for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/puppet.md)
-* [Ansible for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/ansible.md)
-* [docker-compose for dockbix-agent-xxl-limited](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/docker-compose.yml)
-* [systemd service unit file - see next section](https://github.com/monitoringartist/dockbix-agent-xxl/blob/master/systemd/docker-zabbix-agent-xxl.service)
+* [Puppet for dockbix-agent-xxl-limited](puppet.md)
+* [Ansible for dockbix-agent-xxl-limited](ansible.md)
+* [docker-compose for dockbix-agent-xxl-limited](docker-compose.yml)
+* [systemd service unit file - see next section](systemd/docker-zabbix-agent-xxl.service)
 
 Dockbix Agent XXL service managed by systemd:
 
