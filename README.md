@@ -49,6 +49,8 @@ for free:
 
 # Public limited vs private paid image
 
+[Buy](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
+
 Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
 `monitoringartist/dockbix-agent-xxl:latest`. However, limited version:
