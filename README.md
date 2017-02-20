@@ -42,6 +42,8 @@ docker run \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
 
+If Docker user namespaces are enabled, then you need also `--userns=host`.
+
 Please donate to the author, so he can continue to publish other awesome projects
 for free:
 
