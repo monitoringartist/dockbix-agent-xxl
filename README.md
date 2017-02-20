@@ -112,12 +112,14 @@ the Docker daemon API or cgroups.
 
 # How to monitor dockerized apps
 
-These are only recommendations:
+These are only ideas:
 
 - health endpoint: publish app health as a http endpoint, which can be used for
-  monitoring
+  monitoring (item keys: `web.page.get, web.page.perf, web.page.regexp`)
 - monitor them as a service: use standard Zabbix TCP/HTTP check
+  (item keys: `net.tcp.port, net.tcp.service, net.tcp.service.perf`)
 - monitor them as a process: use standard Zabbix process check
+  (item key: `proc.num`)
 
 # Included projects
 
@@ -210,8 +212,10 @@ him and ask for paid support
 All reported issues, which are not really issues, but requests for support will
 be closed with reference to this README section.
 
-Known issue: a systems with recent kernel (4.8.4 and above) might have a problem
-to start agent properly (issue in the docker logs: `terminated with signal 11`).
+# Known issues
+
+- a systems with recent kernel (4.8.4 and above) might have a problem
+to start Dockbix agent properly (issue in the docker logs: `terminated with signal 11`)
 
 # Author
 
