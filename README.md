@@ -112,14 +112,16 @@ the Docker daemon API or cgroups.
 
 # How to monitor dockerized apps
 
-These are only ideas:
+Ideas about monitoring of dockerized apps:
 
 - health endpoint: publish app health as a http endpoint, which can be used for
-  monitoring (item keys: `web.page.get, web.page.perf, web.page.regexp`)
+  monitoring (item keys: `web.page.get, web.page.regexp`)
 - monitor them as a service: use standard Zabbix TCP/HTTP check
   (item keys: `net.tcp.port, net.tcp.service, net.tcp.service.perf`)
 - monitor them as a process: use standard Zabbix process check
   (item key: `proc.num`)
+
+Still no idea how to monitor yours dockerized app? [Hire us!](#author)
 
 # Included projects
 
