@@ -162,9 +162,9 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 * [Puppet for dockbix-agent-xxl-limited](puppet.md)
 * [Ansible for dockbix-agent-xxl-limited](ansible.md)
 * [docker-compose for dockbix-agent-xxl-limited](docker-compose.yml)
-* [systemd service unit file - see next section](systemd/docker-zabbix-agent-xxl.service)
+* [systemd service unit file - see next section](#dockbix-agent-xxl-service-managed-by-systemd)
 
-Dockbix Agent XXL service managed by systemd:
+# Dockbix Agent XXL service managed by systemd
 
 Example of [systemd service unit file for Dockbix Agent XXL](systemd/docker-dockbix-agent-xxl.service) -
 don't forget to edit environment variables. Then you can manage Dockbix agent XXL
@@ -202,7 +202,7 @@ b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbi
 
 # Support
 
-First try to troubleshoot problems. Increase debug level ` -e 'ZA_DebugLevel=5'`
+First try to troubleshoot problems yourself. Increase debug level ` -e 'ZA_DebugLevel=5'`
 and check the container logs `docker logs dockbix-agent-xxl`.
 
 Other options:
