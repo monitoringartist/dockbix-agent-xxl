@@ -1,4 +1,4 @@
-# Puppet for dockerized zabbix-agent-xxl-limited
+# Puppet for dockerized dockbix-agent-xxl-limited
 
 This for your Puppet inspiration. Final implementation is up to you:
 
@@ -9,13 +9,14 @@ This for your Puppet inspiration. Final implementation is up to you:
 class { 'docker':
   version => 'latest',
 }->
-docker::image { 'monitoringartist/zabbix-agent-xxl-limited':
+docker::image { 'monitoringartist/dockbix-agent-xxl-limited':
   image_tag => 'latest',
 }->
-docker::run { 'zabbix-agent-xxl':
-  image            => 'monitoringartist/zabbix-agent-xxl-limited',
+docker::run { 'dockbix-agent-xxl':
+  image            => 'monitoringartist/dockbix-agent-xxl-limited',
   extra_parameters => ['--restart=unless-stopped'],
-  ports            => ['10050'],
+  privileged       => true,
+  net              => 'host',
   volumes          => ['/:/rootfs'],
   env              => [
     'ZA_Server=<ZABBIX SERVER IP/DNS NAME>',
@@ -26,8 +27,15 @@ docker::run { 'zabbix-agent-xxl':
 # Author
 
 [Devops Monitoring Expert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring'),
-who loves monitoring systems, which start with letter Z. Those are Zabbix and Zenoss.
+who loves monitoring systems and cutting/bleeding edge technologies: Docker,
+Kubernetes, ECS, AWS, Google GCP, Terraform, Lambda, Zabbix, Grafana, Elasticsearch,
+Kibana, Prometheus, Sysdig, ...
 
-Professional devops / monitoring services:
+Summary:
+* 1000+ [GitHub](https://github.com/monitoringartist/) stars
+* 6000+ [Grafana dashboard](https://grafana.net/monitoringartist) downloads
+* 800 000+ [Docker image](https://hub.docker.com/u/monitoringartist/) pulls
+
+Professional devops / monitoring / consulting services:
 
 [![Monitoring Artist](http://monitoringartist.com/img/github-monitoring-artist-logo.jpg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')

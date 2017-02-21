@@ -1,0 +1,14 @@
+[Unit]
+Description=Dockbix Agent XXL www.monitoringartist.com
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=/usr/bin/docker pull monitoringartist/dockbix-agent-xxl-limited:latest
+ExecStart=/usr/bin/docker run --rm -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" --name %n -h %H --net=host --privileged -v /:/rootfs -v /var/run:/var/run monitoringartist/dockbix-agent-xxl-limited:latest
+ExecStop=/usr/bin/docker rm -f %n
+
+[Install]
+WantedBy=multi-user.target
