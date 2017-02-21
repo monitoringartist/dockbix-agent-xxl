@@ -51,7 +51,9 @@ for free:
 
 # Public limited vs private paid image
 
-[Buy](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
+[![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
+
+[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
 
 Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
