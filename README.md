@@ -63,7 +63,7 @@ use `docker exec -ti dockbix-agent-xxl bash`
 Dockbix agent container start-up errors, ...), which are used for improvements;
 statistics may be used also for public presentations
 
-[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)a
+[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
 
 General limitations:
 
