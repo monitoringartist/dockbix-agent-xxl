@@ -1,8 +1,8 @@
 # Dockbix Agent XXL - Zabbix Agent with Docker monitoring
 
-[![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg)
+[![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/dockbix-agent-xxl)
-[![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Stars)](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg)
+[![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Stars)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
@@ -63,7 +63,7 @@ use `docker exec -ti dockbix-agent-xxl bash`
 Dockbix agent container start-up errors, ...), which are used for improvements;
 statistics may be used also for public presentations
 
-[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
+[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)a
 
 General limitations:
 
