@@ -38,6 +38,7 @@ docker run \
   --privileged \
   -v /:/rootfs \
   -v /var/run:/var/run \
+  --restart unless-stopped \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
