@@ -51,8 +51,6 @@ for free:
 
 # Public limited vs private paid image
 
-[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
-
 Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
 `monitoringartist/dockbix-agent-xxl:latest`. However, limited version:
@@ -64,6 +62,8 @@ use `docker exec -ti dockbix-agent-xxl bash`
 - collects statistic Google Analytics data (Docker version, kernel version, execution driver,
 Dockbix agent container start-up errors, ...), which are used for improvements;
 statistics may be used also for public presentations
+
+[![Buy](doc/buy-now.jpg)](https://monitoringartist.com/product/private-docker-image-dockbix-agent-xxl/)
 
 General limitations:
 
