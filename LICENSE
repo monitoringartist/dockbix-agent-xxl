@@ -5,9 +5,9 @@ Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
 
 You may not copy, modify, sublicense, or distribute the binary files 
-zabbix-agent-xxl and zabbix_agentd included in Docker image 
-monitoringartist/zabbix-agent-xxl-limited. Any reusing and modifications of 
-Docker image monitoringartist/zabbix-agent-xxl-limited are not allowed.
+dockbix-agent-xxl and zabbix_agentd included in Docker image
+monitoringartist/dockbix-agent-xxl-limited. Any reusing and modifications of
+Docker image monitoringartist/dockbix-agent-xxl-limited are not allowed.
 
 Warranty Disclaimer
 
@@ -28,4 +28,3 @@ Limitation of Liability
 In no event shall Monitoring Artist Ltd be liable for any indirect, incidental,
 consequential, special or punitive damages of any kind or nature, including, but
 not limited to, loss of profits or loss of data, for any reason whatsoever.
-
