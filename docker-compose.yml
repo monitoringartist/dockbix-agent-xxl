@@ -5,6 +5,7 @@ services:
     image: monitoringartist/dockbix-agent-xxl-limited:latest
     privileged: true
     network_mode: "host"
+    restart: unless-stopped
     volumes:
       - /:/rootfs
       - /var/run:/var/run
