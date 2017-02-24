@@ -15,7 +15,8 @@ This for your Ansible inspiration. Final implementation is up to you:
     net: host
     privileged: true
     volumes:
-      - /:/rootfs    
+      - /:/rootfs
+      - /var/run:/var/run
     env:
         ZA_Server: <ZABBIX SERVER IP/DNS NAME>     
 ```
