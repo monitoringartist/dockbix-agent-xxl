@@ -28,8 +28,8 @@ or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQz
 Start Dockbix agent container and monitor all Docker containers on your host.
 Module [Zabbix Docker monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
 is used - all [docker module container metrics](https://github.com/monitoringartist/zabbix-docker-monitoring)
-are available except `docker.xnet`. Import/assign [Docker template](https://raw.githubusercontent.com/monitoringartist/zabbix-docker-monitoring/master/template/Zabbix-Template-App-Docker.xml) +
-official Zabbix "Template OS Linux" and then just start Dockbix agent container:
+are available except `docker.xnet`. Import/assign [Dockbix Agent XXL templates](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/Zabbix-Templates-for-Dockbix-Agent-XXL.xml) +
+then just start Dockbix agent container:
 
 ```
 docker run \
@@ -40,6 +40,7 @@ docker run \
   -v /var/run:/var/run \
   --restart unless-stopped \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
+  -e "ZA_ServerActive=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
 
@@ -85,6 +86,8 @@ docker run \
   --net=host \
   --privileged \
   -v /:/rootfs \
+  -v /var/run:/var/run \
+  --restart unless-stopped \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
   -e "ZA_ServerActive=<ZABBIX SERVER IP/DNS NAME>" \
   -e "ZA_StartAgents=10" \
@@ -216,7 +219,7 @@ Other options:
 - If you need support directly from the author, then don't hesitate to contact
 him and ask for paid support
 
-All reported issues, which are not really issues, but requests for support will
+All reported issues, which are not real issues, but requests for support will
 be closed with reference to this README section.
 
 # Known issues
