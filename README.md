@@ -31,6 +31,8 @@ is used - all [docker module container metrics](https://github.com/monitoringart
 are available except `docker.xnet`. Import/assign [Dockbix Agent XXL templates](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/Zabbix-Templates-for-Dockbix-Agent-XXL.xml) +
 then just start Dockbix agent container:
 
+![Dockbix Agent XXL Docker container](doc/dockbix-agent-xxl.gif)
+
 ```
 docker run \
   --name=dockbix-agent-xxl \
