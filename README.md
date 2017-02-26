@@ -101,7 +101,7 @@ You can't override some parameters: `AllowRoot, LoadModulePath, LoadModule,
 LogType`, because Docker monitoring module is used. Also Zabbix agent configuration
 from the config file is not supported.
 
-# Public Dockbix agent XXL
+# Public Dockbix Agent XXL
 
 Public Dockbix agent XXL is available on the address
 `play.monitoringart.com:10050`. It's available for anyone as a public part of
@@ -150,6 +150,7 @@ docker run \
   -v /:/rootfs \
   -v /var/run:/var/run \
   -e "ZA_Server=<ZABBIX SERVER IP/DNS NAME>" \
+  -e "ZA_ServerActive=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 
 # used HW - 8xCPU Intel(R) Xeon(R) CPU E31270 @ 3.40GHz:
@@ -176,7 +177,7 @@ Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650
 
 # Dockbix Agent XXL service managed by systemd
 
-Example of [systemd service unit file for Dockbix Agent XXL](systemd/docker-dockbix-agent-xxl.service) -
+Example of [systemd service unit file for Dockbix agent XXL](systemd/docker-dockbix-agent-xxl.service) -
 don't forget to edit environment variables. Then you can manage Dockbix agent XXL
 as a standard OS service:
 
