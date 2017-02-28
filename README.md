@@ -48,6 +48,12 @@ docker run \
 
 If Docker user namespaces are enabled, then you need also `--userns=host`.
 
+![Dockbix Agent XXL Docker container](doc/dockbix-agent-xxl-version.gif)
+
+```
+docker run --rm -t monitoringartist/dockbix-agent-xxl-limited version
+```
+
 Please donate to the author, so he can continue to publish other awesome projects
 for free:
 
