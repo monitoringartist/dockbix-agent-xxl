@@ -6,7 +6,7 @@
 [![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Commercial support ready](https://img.shields.io/badge/Commercial support-ready-brightgreen.svg)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
-Standard Zabbix Agent with Docker and host metrics support, which can be used
+[`dockbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/) is a 2nd generation of successful (400k+ pulls) [`zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/) Docker image - standard Zabbix Agent with Docker and host metrics support, which can be used
 with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Fedora,
 Boot2docker, Photon OS.
 
