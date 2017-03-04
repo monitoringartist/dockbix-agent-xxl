@@ -220,7 +220,13 @@ b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbi
 # Support
 
 First try to troubleshoot problems yourself. Increase debug level ` -e 'ZA_DebugLevel=5'`
-and check the container logs `docker logs dockbix-agent-xxl`.
+and check the container logs `docker logs dockbix-agent-xxl`. Try to obtain raw
+values from the agent, for example:
+
+```
+# docker exec -ti dockbix-agent-xxl zabbix_get -s 127.0.0.1 -k docker.mem[/dockbix-agent-xxl,rss]
+2977792
+```
 
 Other options:
 
