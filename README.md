@@ -78,6 +78,7 @@ statistics may be used also for public presentations
 General limitations:
 
 - Zabbix agent TLS support and Zabbix agent server IP check are disabled
+- Dockbix agent container doesn't support `docker stop/start` container commands
 
 # Environment configuration variables
 
