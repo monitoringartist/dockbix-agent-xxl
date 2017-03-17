@@ -3,7 +3,7 @@
 [![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/dockbix-agent-xxl)
 [![DockerHub stars](https://img.shields.io/docker/stars/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Stars)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
-[![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
+[![Docker ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg?style=plastic)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![Docker Store ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg?style=plastic&label=DockerHub%20Store)](https://store.docker.com/images/d01b16a8-596b-4e30-8892-7cd64781ca98)
 [![Commercial support ready](https://img.shields.io/badge/Commercial_support-ready-brightgreen.svg?style=plastic)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
