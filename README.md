@@ -1,4 +1,6 @@
-# Dockbix Agent XXL - Zabbix Agent with Docker monitoring
+[<img src="https://monitoringartist.github.io/managed-by-monitoringartist.png" alt="Managed by Monitoring Artist: DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Terraform / Monitoring" align="right"/>](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Zabbix / Zenoss / Terraform / Monitoring')
+
+# Dockbix Agent XXL - Zabbix Agent with Docker and systemd monitoring
 
 [![DockerHub pulls](https://img.shields.io/docker/pulls/monitoringartist/dockbix-agent-xxl-limited.svg?style=plastic&label=DockerHub%20Pulls)](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 [![GitHub stars](https://img.shields.io/github/stars/monitoringartist/dockbix-agent-xxl.svg?style=plastic&label=GitHub%20Stars)](https://github.com/monitoringartist/dockbix-agent-xxl)
@@ -7,9 +9,11 @@
 [![Docker Store ready](https://img.shields.io/badge/Docker-ready-brightgreen.svg?style=plastic&label=Docker%20Store)](https://store.docker.com/images/d01b16a8-596b-4e30-8892-7cd64781ca98)
 [![Commercial support ready](https://img.shields.io/badge/Commercial_support-ready-brightgreen.svg?style=plastic)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
-[`dockbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/) is a 2nd generation of successful (400k+ pulls) [`zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/) Docker image - it's a standard Zabbix agent with Docker and host metrics support, which can be used
-with any Zabbix server. Tested on CoreOS, RHEL, CentOS, Ubuntu, Debian, Fedora,
-Boot2docker, Photon OS.
+[`dockbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
+is a 2nd generation of successful (400k+ pulls) [`zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/)
+Docker image - it's a standard Zabbix agent with Docker/host/systemd/stress
+metrics support, which can be used with any Zabbix server. Tested on CoreOS,
+RHEL, CentOS, Ubuntu, Debian, Fedora, Boot2docker, Photon OS.
 
 If you like or use this project, please provide feedback to author - Star it ★
 or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQzXU8_DMzboxf_qggE3qgjgpPHoBlE9RzLCXKA/viewform).
@@ -55,8 +59,8 @@ If Docker user namespaces are enabled, then you need also `--userns=host`.
 docker run --rm -t monitoringartist/dockbix-agent-xxl-limited version
 ```
 
-Please donate to the author, so he can continue to publish other awesome projects
-for free:
+Please donate to the author, so he can continue to publish other awesome
+projects for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
 
@@ -66,6 +70,7 @@ Public limited Docker image `monitoringartist/dockbix-agent-xxl-limited:latest`
 has almost the same functionality as private paid Docker image
 `monitoringartist/dockbix-agent-xxl:latest`. However, limited version:
 
+- doesn't support custom UserParameter(s)
 - doesn't support command execution in the container; for example, you can't
 use `system.run[]` item
 - doesn't support any shell access in the container; for example, you can't
@@ -80,6 +85,7 @@ General limitations:
 
 - Zabbix agent TLS support and Zabbix agent server IP check are disabled
 - Dockbix agent container doesn't support `docker stop/start` container commands
+- Dockbix agent doesn't support Docker network metrics `docker.xnet`
 
 # Environment configuration variables
 
@@ -143,6 +149,8 @@ Still no idea how to monitor yours dockerized app? [Hire us!](#author)
 
 # Included projects
 
+ * [zabbix-module-systemd](https://github.com/cavaliercoder/zabbix-module-systemd) -
+ loadbable agent module for systemd monitoring
  * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) -
  utility to test performance of Zabbix agent
  * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) -
