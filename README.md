@@ -11,7 +11,7 @@
 
 [`dockbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
 is a 2nd generation of successful (400k+ pulls) [`zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/)
-Docker image - it's a standard Zabbix agent with Docker/host/systemd/stress
+Docker image - it's a standard Zabbix agent with Docker/host/systemd/socket/stress
 metrics support, which can be used with any Zabbix server. Tested on CoreOS,
 RHEL, CentOS, Ubuntu, Debian, Fedora, Boot2docker, Photon OS.
 
@@ -121,8 +121,14 @@ Example of Zabbix templates, which can be used with Dockbix agent:
 
 - [Templates for Dockbix Agent XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/Zabbix-Templates-for-Dockbix-Agent-XXL.xml) -
   discovers and monitors host and Docker metrics
-- [Templates App systemd servives](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-systemd/master/templates/Template%20App%20systemd%20services.xml) -
+- [Templates App systemd services](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-systemd/master/templates/Template%20App%20systemd%20services.xml) -
   discovers and monitors systemd services metrics
+- [Template App TCP Sockets](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-sockets/master/templates/Template_App_TCP_Sockets_3.2.xml) -
+  monitors TCP socket metrics
+- [Template App UDP Sockets](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-sockets/master/templates/Template_App_UDP_Sockets_3.2.xml) -
+  monitors UDP socket metrics
+- [Template App UNIX Sockets](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-sockets/master/templates/Template_App_Unix_Sockets_3.2.xml) -
+  monitors UNIX socket metrics
 - [Template App Zabbix Server Stress 5k passive A](https://raw.githubusercontent.com/monitoringartist/zabbix-server-stress-test/master/templates/Template%20App%20Zabbix%20Server%20Stress%205k%20passive%20A.xml) -
   template for Zabbix stress testing
 
@@ -162,6 +168,8 @@ Still no idea how to monitor yours dockerized app? [Hire us!](#author)
 
  * [zabbix-module-systemd](https://github.com/cavaliercoder/zabbix-module-systemd) -
  loadbable agent module for systemd monitoring
+ * [zabbix-module-sockets](https://github.com/cavaliercoder/zabbix-module-sockets) -
+ loadbable agent module for sockets monitoring
  * [zabbix_agent_bench](https://github.com/cavaliercoder/zabbix_agent_bench) -
  utility to test performance of Zabbix agent
  * [zabbix-server-stress-test](https://github.com/monitoringartist/zabbix-server-stress-test) -
