@@ -115,6 +115,17 @@ You can't override some parameters: `AllowRoot, LoadModulePath, LoadModule,
 LogType`, because Docker monitoring module is used. Also Zabbix agent configuration
 from the config file is not supported.
 
+# Zabbix templates
+
+Example of Zabbix templates, which can be used with Dockbix agent:
+
+- [Templates-for-Dockbix-Agent-XXL.xml](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/Zabbix-Templates-for-Dockbix-Agent-XXL.xml)
+  discovers and monitors host and Docker metrics
+- [Templates App systemd servives](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-systemd/master/templates/Template%20App%20systemd%20services.xml)
+  discovers and monitors systemd services metrics
+- [Template App Zabbix Server Stress 5k passive A](https://raw.githubusercontent.com/monitoringartist/zabbix-server-stress-test/master/templates/Template%20App%20Zabbix%20Server%20Stress%205k%20passive%20A.xml)
+  template for Zabbix stress testing
+
 # Public Dockbix Agent XXL
 
 Public Dockbix agent XXL is available on the address
