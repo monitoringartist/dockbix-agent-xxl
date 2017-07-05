@@ -85,7 +85,7 @@ General limitations:
 
 - Zabbix agent TLS support and Zabbix agent server IP check are disabled
 - Dockbix agent container doesn't support `docker stop/start` container commands
-- Dockbix agent doesn't support Docker network metrics `docker.xnet`
+- Dockbix agent container doesn't support `docker.xnet` container metrics
 
 # Environment configuration variables
 
