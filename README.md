@@ -119,7 +119,7 @@ from the config file is not supported.
 
 Example of Zabbix templates, which can be used with Dockbix agent:
 
-- [Templates-for-Dockbix-Agent-XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/Zabbix-Templates-for-Dockbix-Agent-XXL.xml) -
+- [Templates for Dockbix Agent XXL](https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/Zabbix-Templates-for-Dockbix-Agent-XXL.xml) -
   discovers and monitors host and Docker metrics
 - [Templates App systemd servives](https://raw.githubusercontent.com/cavaliercoder/zabbix-module-systemd/master/templates/Template%20App%20systemd%20services.xml) -
   discovers and monitors systemd services metrics
