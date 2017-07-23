@@ -219,8 +219,8 @@ for inspiration
 * [systemd service unit file](#dockbix-agent-xxl-service-managed-by-systemd) - see section below
 
 Please feel free to create pull request for other Docker orchestration tools:
-AWS ECS, Docker Swarm, Mesos/Marathon, Cloud Foundry, Zenoss Control Center,
-...
+AWS ECS, Docker Swarm, Mesos/Marathon, Cloud Foundry, CoreOS Fleet, Azure ACS,
+Nomad, Zenoss Control Center, ...
 
 # Dockbix Agent XXL service managed by systemd
 
