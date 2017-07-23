@@ -38,7 +38,7 @@ then just start Dockbix agent container:
 
 ![Dockbix Agent XXL Docker container](doc/dockbix-agent-xxl.gif)
 
-```
+```bash
 docker run \
   --name=dockbix-agent-xxl \
   --net=host \
@@ -55,7 +55,7 @@ If Docker user namespaces are enabled, then you need also `--userns=host`.
 
 ![Dockbix Agent XXL Docker container](doc/dockbix-agent-xxl-version.gif)
 
-```
+```bash
 docker run --rm -t monitoringartist/dockbix-agent-xxl-limited version
 ```
 
@@ -96,7 +96,7 @@ just add environment variable `-e "ZA_StartAgents=10"`.
 
 Example:
 
-```
+```bash
 docker run \
   --name=dockbix-agent-xxl \
   --net=host \
@@ -131,6 +131,12 @@ Example of Zabbix templates, which can be used with Dockbix agent:
   monitors UNIX socket metrics
 - [Template App Zabbix Server Stress 5k passive A](https://raw.githubusercontent.com/monitoringartist/zabbix-server-stress-test/master/templates/Template%20App%20Zabbix%20Server%20Stress%205k%20passive%20A.xml) -
   template for Zabbix stress testing
+
+# Migration
+
+There is no special action required to migrate from the Docker image
+[`monitoringartist/zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/).
+Just change Docker image name. Environment variables are still the same.
 
 # Public Dockbix Agent XXL
 
@@ -177,8 +183,8 @@ Still no idea how to monitor yours dockerized app? [Hire us!](#author)
 
 Zabbix agent stress testing:
 
-```
-docker run \
+```bash
+$ docker run \
   --name=dockbix-agent-xxl \
   --net=host \
   --privileged \
@@ -189,7 +195,7 @@ docker run \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 
 # used HW - 8xCPU Intel(R) Xeon(R) CPU E31270 @ 3.40GHz:
-docker exec -ti dockbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping --threads 50
+$ docker exec -ti dockbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping --threads 50
 Testing 1 keys with 50 threads (press Ctrl-C to cancel)...
 stress.ping :	1225787	0	0
 
@@ -203,12 +209,18 @@ Total key list iterations:	1225787
 Finished! Processed 1225787 values across 50 threads in 30.002141605s (40856.650040 NVPS)
 ```
 
-# Integrations
+# Integrations/Docker orchestrations
 
+* Kubernetes - please visit https://github.com/monitoringartist/kubernetes-zabbix
+for inspiration
 * [Puppet for dockbix-agent-xxl-limited](puppet.md)
 * [Ansible for dockbix-agent-xxl-limited](ansible.md)
 * [docker-compose for dockbix-agent-xxl-limited](docker-compose.yml)
-* [systemd service unit file - see next section](#dockbix-agent-xxl-service-managed-by-systemd)
+* [systemd service unit file](#dockbix-agent-xxl-service-managed-by-systemd) - see section below
+
+Please feel free to create pull request for other Docker orchestration tools:
+AWS ECS, Docker Swarm, Mesos/Marathon, Cloud Foundry, Zenoss Control Center,
+...
 
 # Dockbix Agent XXL service managed by systemd
 
@@ -216,13 +228,13 @@ Example of [systemd service unit file for Dockbix agent XXL](systemd/docker-dock
 don't forget to edit environment variables. Then you can manage Dockbix agent XXL
 as a standard OS service:
 
-```
-# wget -P /usr/lib/systemd/system/ https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service
-## edit env variables: vi /usr/lib/systemd/system/docker-dockbix-agent-xxl.service
-# systemctl enable docker-dockbix-agent-xxl.service
+```bash
+$ wget -P /usr/lib/systemd/system/ https://raw.githubusercontent.com/monitoringartist/dockbix-agent-xxl/master/systemd/docker-dockbix-agent-xxl.service
+# edit env variables: vi /usr/lib/systemd/system/docker-dockbix-agent-xxl.service
+$ systemctl enable docker-dockbix-agent-xxl.service
 Created symlink from /etc/systemd/system/multi-user.target.wants/docker-dockbix-agent-xxl.service to /usr/lib/systemd/system/docker-dockbix-agent-xxl.service.
-# systemctl start docker-dockbix-agent-xxl.service
-# systemctl status docker-dockbix-agent-xxl.service
+$ systemctl start docker-dockbix-agent-xxl.service
+$ systemctl status docker-dockbix-agent-xxl.service
 ● docker-dockbix-agent-xxl.service - Dockbix Agent XXL www.monitoringartist.com
    Loaded: loaded (/usr/lib/systemd/system/docker-dockbix-agent-xxl.service; enabled; vendor preset: disabled)
    Active: active (running) since Sat 2016-08-20 00:17:04 BST; 5s ago
@@ -242,7 +254,7 @@ Aug 20 00:17:05 dockerhost docker[72719]: 12:20160819:231705.583 agent #1 starte
 Aug 20 00:17:05 dockerhost docker[72719]: 14:20160819:231705.583 agent #3 started [listener #2]
 Aug 20 00:17:05 dockerhost docker[72719]: 13:20160819:231705.584 agent #2 started [listener #1]
 Aug 20 00:17:05 dockerhost docker[72719]: 15:20160819:231705.586 agent #4 started [listener #3]
-# docker ps | grep dockbix-agent-xxl
+$ docker ps | grep dockbix-agent-xxl
 b2ecbf3a7df0        monitoringartist/dockbix-agent-xxl-limited:latest   "/dockbix-agent-xxl"       25 seconds ago      Up 24 seconds       0.0.0.0:10050->10050/tcp   docker-zabbix-agent-xxl.service
 ```
 
@@ -252,8 +264,8 @@ First try to troubleshoot problems yourself. Increase debug level ` -e 'ZA_Debug
 and check the container logs `docker logs dockbix-agent-xxl`. Try to obtain raw
 values from the agent, for example:
 
-```
-# docker exec -ti dockbix-agent-xxl zabbix_get -s 127.0.0.1 -k docker.mem[/dockbix-agent-xxl,rss]
+```bash
+$ docker exec -ti dockbix-agent-xxl zabbix_get -s 127.0.0.1 -k docker.mem[/dockbix-agent-xxl,rss]
 2977792
 ```
 
