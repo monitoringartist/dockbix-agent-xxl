@@ -282,7 +282,7 @@ be closed with reference to this README section.
 
 - a systems with recent kernel (4.8.4 and above) might have a problem
 to start Dockbix agent properly (issue in the docker logs: `terminated with signal 11`) -
-env variable `ROOT_NO_SECCOMP=1` may be a workaround for this problem
+env variable `PROOT_NO_SECCOMP=1` may be a workaround for this problem
 
 # Author
 
