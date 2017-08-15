@@ -50,8 +50,9 @@ docker run \
   -e "ZA_ServerActive=<ZABBIX SERVER IP/DNS NAME>" \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 ```
-
-If Docker user namespaces are enabled, then you need also `--userns=host`.
+For kernel 4.8.4 and above please add env variable `-e PROOT_NO_SECCOMP=1`.
+See [Known issues](#known-issues) for more details. If Docker user namespaces
+are enabled, then you need also `--userns=host`.
 
 ![Dockbix Agent XXL Docker container](doc/dockbix-agent-xxl-version.gif)
 
@@ -134,20 +135,23 @@ Example of Zabbix templates, which can be used with Dockbix agent:
 
 # Migration
 
-There is no special action required to migrate from the Docker image
+There is no special action required to migrate from older Docker image
 [`monitoringartist/zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/).
 Just change Docker image name. Environment variables are still the same.
 
-# Public Dockbix Agent XXL
+# Public test Dockbix Agent XXL
 
-Public Dockbix agent XXL is available on the address
-`play.monitoringart.com:10050`. It's available for anyone as a public part of
+Public test Dockbix agent XXL is available on the address
+`play.monitoringart.com:10050`*. It's available for anyone as a public part of
 monitoringartist playground. Just create new host in your Zabbix server with
-this configuration:
+this configuration and you will see what Dockbix can provide:
 
 ![Public Dockbix Agent XXL](doc/dockbix-public-agent.png)
 
 ![Public Dockbix Agent XXL](doc/dockbix-public-agent1.png)
+
+Note: There is no guarantee of availability of public test Dockbix Agent
+container.
 
 # How it works
 
@@ -221,6 +225,10 @@ for inspiration
 Please feel free to create pull request for other Docker orchestration tools:
 AWS ECS, Docker Swarm, Mesos/Marathon, Cloud Foundry, CoreOS Fleet, Azure ACS,
 Nomad, Zenoss Control Center, ...
+
+3rd party projects:
+
+- https://github.com/ThomasVdBerge/zabbix-docker-terraform
 
 # Dockbix Agent XXL service managed by systemd
 
