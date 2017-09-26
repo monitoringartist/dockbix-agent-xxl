@@ -210,7 +210,7 @@ $ docker run \
   -d monitoringartist/dockbix-agent-xxl-limited:latest
 
 # used HW - 8xCPU Intel(R) Xeon(R) CPU E31270 @ 3.40GHz:
-$ docker exec -ti dockbix-agent-xxl zabbix_agent_bench -timelimit 30 -key stress.ping --threads 50
+$ docker exec -ti dockbix-agent-xxl zabbix_agent_bench -host 127.0.0.1 -timelimit 30 -key stress.ping --threads 50
 Testing 1 keys with 50 threads (press Ctrl-C to cancel)...
 stress.ping :	1225787	0	0
 
