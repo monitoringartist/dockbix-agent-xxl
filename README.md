@@ -10,7 +10,7 @@
 [![Commercial support ready](https://img.shields.io/badge/Commercial_support-ready-brightgreen.svg?style=plastic)](http://www.monitoringartist.com 'DevOps / Docker / Kubernetes / AWS ECS / Google GCP / Zabbix / Zenoss / Terraform / Monitoring')
 
 [`dockbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)
-is a 2nd generation of successful (400k+ pulls) [`zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/)
+is a 2nd generation of successful (500k+ pulls) [`zabbix-agent-xxl-limited`](https://hub.docker.com/r/monitoringartist/zabbix-agent-xxl-limited/)
 Docker image - it's a standard Zabbix agent with Docker/host/systemd/socket/stress
 metrics support, which can be used with any Zabbix server. Tested on CoreOS,
 RHEL, CentOS, Ubuntu, Debian, Fedora, Boot2docker, Photon OS.
@@ -22,14 +22,14 @@ or [submit feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdte1irviwtQz
 
 **Overview of Monitoring Artist (dockerized) monitoring ecosystem:**
 
-- **[Zabbix XXL](https://hub.docker.com/r/monitoringartist/zabbix-xxl/)** - standard Zabbix server/proxy/UI/snmpd/java gateway with additional XXL extensions
-- **[Dockbix agent XXL](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)** - Zabbix agent with [Docker (Kubernetes/Mesos/Chronos/Marathon) monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring)
-- **[Zabbix templates](https://hub.docker.com/r/monitoringartist/zabbix-templates/)** - tiny (5MB) image for easy template deployment of selected Zabbix monitoring templates
-- **[Zabbix extension - all templates](https://hub.docker.com/r/monitoringartist/zabbix-ext-all-templates/)** - storage image for Zabbix XXL with 200+ [community templates](https://github.com/monitoringartist/zabbix-community-repos)
+- **[Dockbix XXL](https://hub.docker.com/r/monitoringartist/dockbix-xxl/)** - Zabbix server/proxy/UI/snmpd/java gateway with additional extensions
+- **[Dockbix agent XXL](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/)** - Zabbix agent with [Docker (Kubernetes/Mesos/Chronos/Marathon) monitoring](https://github.com/monitoringartist/zabbix-docker-monitoring) module
+- **[Zabbix templates](https://hub.docker.com/r/monitoringartist/zabbix-templates/)** - tiny Docker image for simple template deployment of selected Zabbix monitoring templates
+- **[Zabbix extension - all templates](https://hub.docker.com/r/monitoringartist/zabbix-ext-all-templates/)** - storage image for Dockbix XXL with 200+ [community templates](https://github.com/monitoringartist/zabbix-community-repos)
 - **[Kubernetized Zabbix](https://github.com/monitoringartist/kubernetes-zabbix)** - containerized Zabbix cluster based on Kubernetes
 - **[Grafana XXL](https://hub.docker.com/r/monitoringartist/grafana-xxl/)** - dockerized Grafana with all community plugins
 - **[Grafana dashboards](https://grafana.net/monitoringartist)** - Grafana dashboard collection for [AWS](https://github.com/monitoringartist/grafana-aws-cloudwatch-dashboards) and [Zabbix](https://github.com/monitoringartist/grafana-zabbix-dashboards)
-- **[Monitoring Analytics](https://hub.docker.com/r/monitoringartist/monitoring-analytics/)** - R statistical computing and graphics for monitoring from data scientists
+- **[Monitoring Analytics](https://hub.docker.com/r/monitoringartist/monitoring-analytics/)** - graphic analytic tool for Zabbix data from data scientists
 - **[Docker killer](https://hub.docker.com/r/monitoringartist/docker-killer/)** - Docker image for Docker stress and Docker orchestration testing
 
 ----
@@ -74,7 +74,7 @@ projects for free:
 | 3.2-2 | Zabbix 3.2 agent + Dockbix v2 |
 | 3.2-1 | Zabbix 3.2 agent + Dockbix v1 |
 
-[Public image tags](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/tags/) | [Private image tags](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl/tags/)
+[Public image tags on Docker Hub](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl-limited/tags/) | [Private image tags on Docker Hub](https://hub.docker.com/r/monitoringartist/dockbix-agent-xxl/tags/)
 
 # Public limited vs private paid image
 
@@ -152,10 +152,10 @@ Just change Docker image name. Environment variables are still the same.
 
 # Public test instance of Dockbix Agent XXL
 
-Public test instance of Dockbix agent XXL is available on the address
+A public test instance of Dockbix agent XXL is available on the address
 `play.monitoringart.com:10050`*. It's available for anyone as a public part of
-monitoringartist playground. Just create new host in your Zabbix server with
-this configuration and you will see what Dockbix can provide:
+the monitoringartist playground. Just create a new host in your Zabbix server
+with this configuration, and you will see what Dockbix can provide:
 
 ![Public Dockbix Agent XXL](doc/dockbix-public-agent.png)
 
@@ -176,7 +176,7 @@ the Docker daemon API or cgroups.
 
 Ideas about monitoring of dockerized apps:
 
-- health endpoint: publish app health as a HTTP endpoint, which can be used for
+- health endpoint: publish app health as an HTTP endpoint, which can be used for
   monitoring (item keys: `web.page.get, web.page.regexp`)
 - monitor them as a service: use standard Zabbix TCP/HTTP check
   (item keys: `net.tcp.port, net.tcp.service, net.tcp.service.perf`)
