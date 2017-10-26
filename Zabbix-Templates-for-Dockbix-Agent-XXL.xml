@@ -2269,7 +2269,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template OS Linux for Dockbix Agent XXL - www.monitoringartist.com:vfs.file.cksum[/etc/passwd].diff(0)}&gt;0</expression>
+            <expression>{Template OS Linux for Dockbix Agent XXL - www.monitoringartist.com:vfs.file.cksum[/rootfs/etc/passwd].diff(0)}&gt;0</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>/etc/passwd has been changed on {HOST.NAME}</name>
